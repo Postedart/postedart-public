@@ -205,22 +205,3 @@ Main website:
 
 This repository complements the website by providing a deeper technical and product explanation layer.
 
----
-
-## Repository structure
-
-postedart-public/
-├─ README.md
-├─ docs/
-│  ├─ vision.md
-│  ├─ how-it-works.md
-│  ├─ app-flow.md
-│  ├─ faq.md
-│  ├─ ai-assistant-guide.md
-│  ├─ terms-of-service.md
-│  ├─ privacy-policy.md
-│  └─ contracts.md
-├─ contracts-reference/
-│  └─ README.md
-└─ website-reference/
-   └─ README.md
