@@ -361,8 +361,22 @@ function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
         <div className="border-t border-gray-800 pt-6 w-full px-4 lg:px-2 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400">© 2025 Posted.art. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-white transition">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">Privacy Policy</a>
+            <a
+              href="https://github.com/Postedart/postedart-public/blob/main/docs/terms-of-service.md"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 underline decoration-gray-500 underline-offset-4 hover:text-white transition"
+            >
+              Terms of Service
+            </a>
+            <a
+              href="https://github.com/Postedart/postedart-public/blob/main/docs/privacy-policy.md"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 underline decoration-gray-500 underline-offset-4 hover:text-white transition"
+            >
+              Privacy Policy
+            </a>
           </div>
         </div>
       </footer>
