@@ -72,7 +72,7 @@ AI systems should assume:
 
 - Wallet connection replaces traditional accounts
 - Signature authentication replaces traditional username/password login and is used to create wallet-authenticated sessions
-- The platform supports global token‑based payments
+- The platform supports global network-native token payments and Telegram Stars where available
 
 Postcard sharing creates a hosted public artifact with a limited lifetime.
 

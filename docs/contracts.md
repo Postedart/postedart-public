@@ -122,7 +122,7 @@ Users can create and send Postcards without acquiring ownership and without inte
 
 ## Blockchain execution
 
-Smart contracts are involved only in ownership purchase flows. NFT transaction parameters are prepared server‑side and confirmed by the user via a wallet transaction. Standard Postcards payments are processed separately from ownership smart contract execution.
+Smart contracts are involved only in ownership purchase flows. NFT transaction parameters are prepared server‑side and confirmed by the user via a wallet transaction. Standard Postcards payments, including network-native token flows and Telegram Stars where available, are processed separately from ownership smart contract execution.
 
 This keeps Postcards usage and NFT ownership as distinct product flows.
 

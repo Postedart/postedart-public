@@ -90,7 +90,7 @@ Posted.art uses reference pricing for the following product types:
 - Premium Art Certificates (NFT): price set by the creator
 
 Prices are displayed in local fiat currencies based on the user’s region for presentation.  
-Payments are executed using native blockchain tokens depending on the selected network.
+Payments are executed using the payment asset shown in the selected network or payment flow.
 
 ### How are payments handled?
 
@@ -299,18 +299,19 @@ hello@posted.art
 
 Postcard payments:
 
-- Ethereum
-- BNB Chain
-- Arbitrum
-- Base
-- Solana
+- Ethereum (ETH)
+- BNB Chain (BNB)
+- Arbitrum (ETH)
+- Base (ETH)
+- Solana (SOL)
+- Telegram (Stars)
 
 Art Certificates (NFTs):
 
-- Ethereum
-- BNB Chain
-- Arbitrum
-- Base
+- Ethereum (ETH)
+- BNB Chain (BNB)
+- Arbitrum (ETH)
+- Base (ETH)
 
 ### What are the smart contract addresses?
 

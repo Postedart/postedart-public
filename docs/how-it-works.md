@@ -27,7 +27,7 @@ A Postcard can include:
 4. The user may optionally add stickers, a short MP3 clip, or a gift attachment.
 5. The user reviews the Postcard composition.
 6. The app prepares payment details server-side where applicable.
-7. The user confirms the wallet transaction.
+7. The user confirms the payment or wallet transaction.
 8. The Postcard is finalized and becomes available for sharing during its active hosting period.
 
 ### Important Postcard rule
@@ -128,8 +128,9 @@ See the FAQ on [how payments are handled](faq.md#how-are-payments-handled), [why
 This means:
 - pricing is server-authoritative and not trusted from the client
 - fiat values are used for presentation only
+- supported payment assets depend on the selected network or payment flow
 - blockchain transaction parameters are prepared server-side
-- users sign authoritative wallet transactions
+- users confirm authoritative payment or wallet transactions
 
 This approach increases control and reduces risk in payment and NFT minting flows.
 

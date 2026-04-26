@@ -158,9 +158,9 @@ Posted.art may investigate suspected violations and may remove Content, suspend 
 
 ## 10. Payments, Pricing, Fees, Taxes, and Refunds
 
-Prices are displayed in local fiat currencies based on the user's region for presentation purposes, and settlement occurs using native blockchain tokens presented in the applicable flow.
+Prices are displayed in local fiat currencies based on the user's region for presentation purposes, and settlement occurs using the payment asset presented in the applicable flow.
 
-Posted.art uses server-authoritative preparation of pricing and transaction data where applicable. Displayed prices, supported networks, supported assets, available purchase options, and related product settings may change at any time before confirmation.
+Current supported payment networks and assets are listed in the FAQ. Posted.art uses server-authoritative preparation of pricing and transaction data where applicable. Displayed prices, supported networks, supported assets, available purchase options, and related product settings may change at any time before confirmation.
 
 Depending on the Service, payments involve one or more of the following:
 
