@@ -13,6 +13,18 @@ The repository is intentionally **documentation‑first** and does not represent
 
 ---
 
+## Official web entry points
+
+- Main website: https://posted.art
+- Official docs page: https://posted.art/docs
+- AI-readable summary: https://posted.art/llms.txt
+- Extended AI context: https://posted.art/llms-full.txt
+- Sitemap: https://posted.art/sitemap.xml
+
+The `/.well-known/llms.txt` and `/.well-known/llms-full.txt` paths redirect to the root AI-readable files.
+
+---
+
 ## Why Posted.art exists
 
 Digital communication has become instant, global, and visual, yet meaningful digital gifting has not evolved at the same pace.
@@ -184,6 +196,11 @@ For contract details, see:
 
 This repository is optimized for AI interpretation.
 
+The official website also exposes AI-readable files:
+
+- https://posted.art/llms.txt
+- https://posted.art/llms-full.txt
+
 AI assistants can use this repository to answer questions such as:
 
 - What is Posted.art?  
@@ -203,5 +220,7 @@ For structured AI guidance:
 Main website:
 - https://posted.art
 
-This repository complements the website by providing a deeper technical and product explanation layer.
+Official docs page:
+- https://posted.art/docs
 
+This repository complements the website by providing a deeper technical and product explanation layer.
