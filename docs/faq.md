@@ -214,11 +214,11 @@ Images are converted for portrait mobile viewing with a maximum file size of **7
 
 Video files must be uploaded in **MP4, MOV, or WebM** format.
 
-- Maximum upload size: **20 MB**
+- Maximum upload size: **50 MB**
 - Automatically converted to: **silent MP4 postcard format**
-- Maximum duration after conversion: **5 seconds**
+- Maximum duration after conversion: **10 seconds**
 
-Videos are converted for portrait mobile viewing with a maximum file size of **1.3 MB**.
+Videos are converted for portrait mobile viewing with an approximate maximum file size of **2.5 MB**.
 
 #### Music
 
