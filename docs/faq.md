@@ -204,11 +204,11 @@ Wallet-based authentication replaces traditional accounts by using signed messag
 
 Image files must be uploaded in **JPG, PNG, WebP, or HEIC** format.
 
-- Maximum upload size: **20 MB**
+- Maximum upload size: **50 MB**
 - Automatically converted to: **WebP format**
-- Maximum width: **1042 pixels**
+- Maximum width: **1200 pixels**
 
-Images are converted for portrait mobile viewing with a maximum file size of **700 KB**.
+Images are converted for portrait mobile viewing with an approximate maximum file size of **1.2 MB**.
 
 #### Video
 
