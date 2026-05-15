@@ -206,9 +206,9 @@ Image files must be uploaded in **JPG, PNG, WebP, or HEIC** format.
 
 - Maximum upload size: **50 MB**
 - Automatically converted to: **WebP format**
-- Maximum width: **1200 pixels**
+- Maximum dimensions after conversion: **1080 × 1920 pixels**
 
-Images are converted for portrait mobile viewing with an approximate maximum file size of **1.2 MB**.
+Images are converted for mobile viewing with square-to-portrait framing only. Landscape images are center-cropped to square, portrait images keep their aspect ratio up to 9:16, and images taller than 9:16 are center-cropped to 9:16. Smaller images are not upscaled. Converted images have an approximate maximum file size of **1.2 MB**.
 
 #### Video
 
@@ -217,8 +217,9 @@ Video files must be uploaded in **MP4, MOV, or WebM** format.
 - Maximum upload size: **50 MB**
 - Automatically converted to: **silent MP4 postcard format**
 - Maximum duration after conversion: **10 seconds**
+- Maximum dimensions after conversion: **720 × 1280 pixels**
 
-Videos are converted for portrait mobile viewing with an approximate maximum file size of **2.5 MB**.
+Videos are converted for mobile viewing with square-to-portrait framing only. Landscape videos are center-cropped to square, portrait videos keep their aspect ratio up to 9:16, and videos taller than 9:16 are center-cropped to 9:16. Smaller videos are not upscaled. Converted videos have an approximate maximum file size of **2.75 MB**.
 
 #### Music
 
