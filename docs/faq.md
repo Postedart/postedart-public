@@ -227,10 +227,10 @@ Music files must be uploaded in **MP3 or WAV** format.
 
 - Maximum upload size: **20 MB**
 - Maximum duration: **10 minutes**
-- Automatically converted to: **stereo WAV postcard clip**
+- Automatically converted to: **mono WAV postcard clip**
 - Maximum duration after conversion: **10 seconds**
 
-Music is converted and optimized for consistent mobile playback with a maximum file size of **2 MB**.
+Music is converted and optimized for consistent mobile playback with an approximate maximum file size of **0.5 MB**.
 
 #### Gift voucher
 
