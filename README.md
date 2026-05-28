@@ -48,9 +48,9 @@ Posted.art introduces direct participation in asset value through Create & Earn,
 Digital culture benefits when participation does not require prior ownership.  
 Users can use visual content socially through Postcards, while collectors can optionally acquire ownership through Art Certificates.
 
-### 4. Global digital products require borderless payment logic
+### 4. Global digital products require platform-aware access logic
 
-Native token‑based execution enables consistent participation across regions without reliance on fragmented local payment systems.
+Posted.art supports different payment and access models depending on the platform. Blockchain-based flows, Telegram Stars, and mobile app subscriptions can all support the same core Postcard experience while keeping pricing and entitlement logic server-authoritative where applicable.
 
 ### 5. Digital rituals must evolve with mobile‑first behavior
 
@@ -89,6 +89,13 @@ A Postcard can include:
 
 Postcards are the primary user interaction layer of the platform.
 
+The Postcard proposition is designed to stay simple:
+- users can send **one Postcard per month for free**
+- Android uses a subscription model for continued Postcard sending
+- Web/EVM, Solana, and Telegram use pay-as-you-use Postcard flows after the free monthly Postcard
+- fair usage limits apply so the product remains lightweight and reliable
+- supported mobile app flows can also schedule Postcards for later reminders
+
 ### 2. Create & Earn
 
 Creators can submit content to become part of the Posted.art content library.  
@@ -101,10 +108,14 @@ Approved content can:
 Create & Earn introduces a **direct creator revenue model**.  
 Content creators receive **90% of revenues from NFT sales**, which differs from advertisement‑driven revenue models used by traditional social platforms.
 
+Create & Earn is part of the web/EVM product layer and is not part of Postcard-only mobile app experiences.
+
 ### 3. Art Certificates
 
 Collectors can buy content from the shared library as NFTs called **Art Certificates**.
 Ownership of an Art Certificate is optional and separate from Postcard usage.
+
+Art Certificates are part of the EVM ownership layer. Postcard-only platforms, including Android, Telegram, and Solana-focused experiences, do not require or expose Art Certificate purchase flows.
 
 The platform separates:
 - **content usage (Postcards)**
@@ -118,8 +129,10 @@ Posted.art follows these core product rules:
 
 - server‑authoritative pricing  
 - no client‑side pricing authority  
-- native token execution for blockchain transactions  
-- fiat values used for presentation only  
+- platform-aware entitlement handling  
+- native token execution for blockchain transactions where applicable  
+- app-store subscription handling where applicable  
+- fiat values for Art Certificates used for presentation only  
 - mobile‑first visual interaction model  
 - shared content library across products  
 - documentation‑first public transparency  

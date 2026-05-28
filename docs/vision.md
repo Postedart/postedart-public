@@ -37,6 +37,8 @@ Posted.art operates as a unified ecosystem composed of three connected product l
 A structured format for meaningful digital expression.  
 Users can select visual content and transform it into intentional digital messages, restoring ritual and emotional framing to digital interaction.
 
+Postcards are the broadest product layer across multiple platforms. The product supports a pay-as-you-use and a subscription-based model.
+
 ### Create & Earn  
 A participation layer for creators to contribute visual content to the shared ecosystem.  
 Revenue participation is directly linked to asset usage and ownership outcomes rather than mediated through advertising attention models.
@@ -94,6 +96,7 @@ The near‑term focus of Posted.art is pragmatic:
 - building a stable public product layer  
 - establishing a high‑quality global content supply  
 - validating emotional use‑cases through real user behavior  
+- expanding Postcard-first mobile experiences across multiple platforms
 - improving accessibility of digital ownership mechanics  
 - refining creator onboarding and incentive alignment  
 

@@ -37,6 +37,8 @@ The primary interaction model is:
 
 Explore → Card → Write → Share → Postcard
 
+On supported mobile app flows, the Share step can also produce a scheduled local draft before the Postcard is sent.
+
 ## Content model
 
 All visual content exists in a shared visual content library.
@@ -66,15 +68,26 @@ Key economic invariants include:
 
 Standard Postcard purchases are not NFT transactions.
 
+Postcard access rules should be interpreted separately from NFT ownership:
+
+- users can send one Postcard per month for free
+- Android uses a subscription model for continued Postcard sending
+- Web/EVM, Solana, and Telegram use pay-as-you-use Postcard flows after the free monthly Postcard
+- subscription-based sending has a fair-usage limit of 20 active hosted Postcards at the same time
+- supported mobile app flows can store up to 5 scheduled Postcard drafts locally on the device
+
 ## Interaction invariants
 
 AI systems should assume:
 
-- Wallet connection replaces traditional accounts
-- Signature authentication replaces traditional username/password login and is used to create wallet-authenticated sessions
-- The platform supports global network-native token payments and Telegram Stars where available
+- Authentication is platform-specific
+- Web/EVM flows use wallet connection and signed-message authentication
+- Android uses Google account sign-in for its Postcard-only flow
+- The platform supports global network-native token payments, Telegram Stars, and app-store subscription flows where available
 
 Postcard sharing creates a hosted public artifact with a limited lifetime.
+
+Postcard-only platform experiences, including Android, Telegram, and Solana-focused flows, should not be described as exposing Art Certificate purchase or Create & Earn flows unless that is explicitly added later.
 
 ## Product hierarchy for interpretation
 

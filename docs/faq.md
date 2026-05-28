@@ -15,9 +15,28 @@ Postcards are designed for mobile viewing and sharing.
 
 ### How long does a Postcard stay online?
 
-Standard Postcards are hosted for **5 days**.
+Hosting depends on the selected product flow.
 
-Users can extend hosting to **30 days** by paying an additional fee during the purchase flow.
+- Pay-as-you-use Postcards include **5 days** of hosting by default.
+- Pay-as-you-use flows can extend hosting to **30 days total** during confirmation.
+- Android subscription Postcards include **30 days** of hosting.
+
+Expired or deleted Postcards are removed from active hosting and can no longer be retrieved.
+
+### Can I schedule a Postcard?
+
+Yes, on Android.
+
+Scheduled Postcards are stored locally on the user's phone as drafts. The app sends a notification reminder at the selected date and time.
+
+Scheduling rules:
+
+- the reminder time must be at least **1 hour from now**
+- the reminder time can be at most **1 month from now**
+- users can store up to **5 scheduled Postcards** at the same time
+- scheduled Postcards remain available as drafts after the reminder notification until the user sends or deletes them
+
+When a scheduled Postcard is opened, the user can send it, choose a new reminder time, delete it, or add a gift file. The already prepared Postcard content itself is not edited from that recovery flow.
 
 ### What happens when someone receives a Postcard?
 
@@ -46,7 +65,9 @@ Users can send Postcards using content from the library without owning that cont
 
 No.
 
-Posted.art does not use traditional accounts.
+Posted.art does not use traditional username/password accounts.
+
+Depending on the platform, protected actions may use either wallet authentication or a supported platform account.
 
 When wallet‑linked access is required, the user is asked to:
 
@@ -58,16 +79,20 @@ This creates a wallet‑authenticated session.
 - Wallet connection replaces traditional accounts
 - Signature authentication replaces traditional username/password login and creates a wallet-authenticated session
 
-### When do I need to connect a wallet?
+On Android, protected Postcard actions use Google account sign-in instead of a wallet.
 
-A wallet connection is required only for using the app, such as:
+### When do I need to authenticate?
+
+Authentication is required only for protected app actions, such as:
 
 - sending a **Postcard**
 - buying an **Art Certificate**
 - using **Create & Earn**
 - liking content
 
-Viewing Postcards does not require a wallet.
+Viewing Postcards does not require authentication.
+
+The authentication method depends on the platform. Web/EVM flows use wallet authentication. Android uses Google account sign-in for its Postcard-only app flow.
 
 
 ## Art Certificates
@@ -83,32 +108,63 @@ They are optional and exist as a collecting layer separate from Postcard usage.
 
 Posted.art uses reference pricing for the following product types:
 
-- Postcard (5 days hosting included): **$0.49**
-- Extend Postcard hosting to 30 days: **+$0.10**
+- Postcard: **one Postcard per month is free**
+- Pay-as-you-use Postcard with 5 days hosting: **$0.49**
+- Pay-as-you-use 30-day hosting extension: **+$0.09**
+- Telegram Postcard with 5 days hosting: **49 Stars**
+- Telegram 30-day hosting extension: **+9 Stars**
+- Android subscription model: **$0.99 per month** for continued Postcard sending with 30-day hosting
 - Image Art Certificate (NFT): **$0.99**
 - Video Art Certificate (NFT): **$1.99**
 - Premium Art Certificates (NFT): price set by the creator
 
-Prices are displayed in local fiat currencies based on the user’s region for presentation.  
+Art Certificate prices are displayed in local fiat currencies based on the user’s region for presentation.  
 Payments are executed using the payment asset shown in the selected network or payment flow.
+
+In app-store subscription flows, the store may display and charge the subscription price in the user's local currency according to that store's pricing and billing rules.
+
+### Is there a fair usage limit for Postcards?
+
+Yes.
+
+Android subscription-based Postcard sending is designed as unlimited normal usage, with a fair-usage limit of **20 active Postcards** at the same time.
+
+If a user already has 20 active hosted Postcards, a new Postcard cannot be created until some active Postcards expire or are deleted.
 
 ### How are payments handled?
 
-Two different payment models exist:
+Several payment and entitlement models exist:
 
-- Postcard → paid via blockchain, with off-chain Postcard creation
+- Postcard → one free Postcard per month
+- Web/EVM Postcards → pay-as-you-use wallet-based payment flow after the free monthly Postcard
+- Solana Postcards → pay-as-you-use Solana payment flow after the free monthly Postcard
+- Telegram Postcards → pay-as-you-use Telegram Stars flow after the free monthly Postcard
+- Android Postcards → app-store subscription model after the free monthly Postcard
+- Future native mobile apps may use a similar subscription model if released
 - Art Certificates (NFTs) → executed via smart contracts, paid and minted on-chain
 
 This separation keeps Postcard usage simple while preserving NFT ownership logic.
 
 ### Can I extend the lifetime of a Postcard?
 
-Yes.
+This depends on the active platform flow.
 
-- Standard hosting duration: **5 days**
-- Optional extension: up to **30 days total**
+Pay-as-you-use Postcards include **5 days** of hosting by default and can extend hosting to **30 days total** during confirmation.
 
-The extension can be purchased during the Postcard creation flow.
+Android subscription Postcards include **30 days** of hosting by default.
+
+### Which products are available on each platform?
+
+Postcards are the shared product across platforms.
+
+Platform availability:
+
+- Web/EVM app: Postcards, Create & Earn, and Art Certificates
+- Android app: Postcards only
+- Telegram app: Postcards only
+- Solana flows: Postcards only
+
+Art Certificates and Create & Earn are EVM/web product layers and are not required for sending Postcards.
 
 
 ## Create & Earn
@@ -174,7 +230,7 @@ Each Postcard has a unique public link that can be reshared during its hosting l
 
 Postcards cannot be edited after creation.
 
-They can be deleted from the wallet page.
+They can be deleted from the user's personal Postcards area.
 
 ### What happens when a Postcard expires?
 
@@ -194,9 +250,11 @@ Posted.art is a **visual communication platform with optional digital ownership*
 
 ### Why does Posted.art use blockchain?
 
-Blockchain is used for secure payments, ownership, and authentication.
+Blockchain is used for secure payments, ownership, and authentication where blockchain flows are part of the selected product experience.
 
 Wallet-based authentication replaces traditional accounts by using signed messages, providing a highly secure way to verify user identity without passwords.
+
+Some platform-specific Postcard flows use non-wallet authentication or payment rails, such as Google account sign-in on Android, Telegram Stars, or app-store subscriptions.
 
 ### What file formats and sizes are supported?
 
@@ -230,7 +288,7 @@ Music files must be uploaded in **MP3 or WAV** format.
 - Automatically converted to: **mono WAV postcard clip**
 - Maximum duration after conversion: **10 seconds**
 
-Music is converted and optimized for consistent mobile playback with an approximate maximum file size of **0.5 MB**.
+Music is converted and optimized for consistent mobile playback with an approximate maximum file size of **500 KB**.
 
 #### Gift voucher
 
@@ -264,7 +322,7 @@ The sticker panel is powered by **GIPHY**. Stickers are rendered into the Postca
 
 ### Which currencies are used across regions?
 
-Posted.art displays prices in local fiat currencies based on the user’s region.
+Posted.art displays Art Certificate prices in local fiat currencies based on the user’s region.
 
 This improves clarity and makes pricing easier to understand across different parts of the world.
 
@@ -298,7 +356,7 @@ hello@posted.art
 
 ### Which networks are supported?
 
-Postcard payments:
+Postcard payment and entitlement flows:
 
 - Ethereum (ETH)
 - BNB Chain (BNB)
@@ -306,6 +364,7 @@ Postcard payments:
 - Base (ETH)
 - Solana (SOL)
 - Telegram (Stars)
+- Android (subscription)
 
 Art Certificates (NFTs):
 

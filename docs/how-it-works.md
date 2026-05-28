@@ -26,9 +26,36 @@ A Postcard can include:
 3. The user adds a personal message.
 4. The user may optionally add stickers, a short MP3 clip, or a gift attachment.
 5. The user reviews the Postcard composition.
-6. The app prepares payment details server-side where applicable.
-7. The user confirms the payment or wallet transaction.
-8. The Postcard is finalized and becomes available for sharing during its active hosting period.
+6. The user chooses to send the Postcard now or, where supported, schedule it for later.
+7. The app checks the free monthly allowance, subscription state, fair-usage limits, and payment requirements where applicable.
+8. The user confirms the Postcard action.
+9. The Postcard is finalized and becomes available for sharing during its active hosting period, or stored locally as a scheduled draft where scheduling is supported.
+
+### Postcard access and pricing model
+
+Posted.art is designed around a simple Postcard proposition:
+
+- each user can send **one Postcard per month for free**
+- after the free allowance, the active platform flow determines the next step
+- Android uses a subscription model for continued Postcard sending
+- Web/EVM, Solana, and Telegram use pay-as-you-use Postcard flows
+- subscription-based sending has a fair-usage limit of **20 active Postcards** at the same time
+
+Platform billing, currency display, and confirmation mechanics can differ by environment. For current pricing details, see the FAQ.
+
+### Scheduled Postcards
+
+Supported mobile app flows can schedule Postcards.
+
+In that model:
+
+1. the prepared Postcard draft is stored locally on the user's phone
+2. the user chooses a reminder time between **1 hour** and **1 month** from now
+3. the app schedules a local notification
+4. the scheduled draft appears in the user's Postcards area
+5. when opened from the notification or Postcards area, the user can send it, choose a new reminder time, add a gift file, delete it, or leave it as a draft
+
+To keep device storage lightweight, the app limits scheduled drafts to **5 scheduled Postcards** at the same time.
 
 ### Important Postcard rule
 
@@ -62,6 +89,8 @@ Create & Earn is separate from standard consumer postcard usage.
 
 Create & Earn introduces a direct creator revenue model aligned with ownership outcomes rather than advertising-based attention models.
 
+Create & Earn is part of the web/EVM product layer. It is not part of Postcard-only app experiences such as Android, Telegram, or Solana network flows.
+
 ---
 
 ## 3. Art Certificates
@@ -81,6 +110,8 @@ They allow users to purchase images and videos from the same shared content libr
 
 Ownership through Art Certificates is optional and independent from Postcards usage.
 Users can participate socially without acquiring ownership.
+
+Art Certificates are part of the EVM ownership layer and are not required or exposed in Postcard-only app experiences.
 
 Related FAQ entries: [Are Art Certificates limited editions?](faq.md#are-art-certificates-limited-editions), [Where is Art Certificate content stored?](faq.md#where-is-art-certificate-content-stored), and [Why does my NFT not appear immediately in my wallet grid?](faq.md#why-does-my-nft-not-appear-immediately-in-my-wallet-grid)
 
@@ -121,16 +152,17 @@ This influences:
 
 ## 6. Blockchain handling
 
-Posted.art uses secure server-authoritative blockchain handling for payments and NFT creation.
+Posted.art uses secure server-authoritative handling for pricing, payment preparation, subscriptions, and NFT creation where applicable.
 
 See the FAQ on [how payments are handled](faq.md#how-are-payments-handled), [why Posted.art uses blockchain](faq.md#why-does-postedart-use-blockchain), and [which networks are supported](faq.md#which-networks-are-supported)
 
 This means:
 - pricing is server-authoritative and not trusted from the client
 - fiat values are used for presentation only
-- supported payment assets depend on the selected network or payment flow
-- blockchain transaction parameters are prepared server-side
-- users confirm authoritative payment or wallet transactions
+- supported payment assets or subscription options depend on the selected platform flow
+- blockchain transaction parameters are prepared server-side where blockchain is used
+- app-store subscription state is treated as a platform-specific entitlement where applicable
+- users confirm the authoritative payment, subscription, or wallet transaction required by the selected flow
 
 This approach increases control and reduces risk in payment and NFT minting flows.
 

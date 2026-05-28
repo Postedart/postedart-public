@@ -1,10 +1,10 @@
 # Privacy Policy
 
-Effective date: April 1, 2026
+Effective date: June 1, 2026
 
 This Privacy Policy explains how Posted.art processes personal data in connection with the Posted.art platform, including the website, web application, mobile-first application experience, hosted Postcard pages, smart-contract-enabled ownership flows, and related services, features, content, and functionality that link to or reference this Privacy Policy (collectively, the "Platform").
 
-Posted.art is designed to minimize personal data collection. The Platform does not use traditional user accounts and primarily relies on Wallet-based, pseudonymous identifiers and transaction-related data needed to operate the Services.
+Posted.art is designed to minimize personal data collection. Depending on the Platform experience being used, Posted.art may rely on Wallet-based pseudonymous identifiers, third-party account authentication providers, or limited account-related identifiers needed to operate the Services.
 
 Capitalized terms used but not defined in this Privacy Policy have the meanings given to them in the Terms of Service.
 
@@ -23,7 +23,7 @@ Posted.art is a mobile-first platform for visual digital content. The personal d
 This Privacy Policy applies to personal data processed by Posted.art in connection with:
 
 - public browsing of the Platform
-- Wallet-linked authentication and session handling
+- authentication, account session handling, and identity verification
 - Wallet-linked favorites and like functionality
 - creation, hosting, and sharing of Postcards
 - creator submissions through Create & Earn
@@ -41,6 +41,7 @@ Depending on how you use the Platform, Posted.art may process the following cate
 
 - Wallet addresses and related public blockchain identifiers
 - signed authentication messages and related authentication metadata
+- account-related identity data provided through supported authentication providers, including limited profile and account information used for authenticated Platform access
 - technical data limited to what is needed to operate the Platform, including IP-based location handling and browser language detection
 - Postcard-related data, including selected Content, any personal written message, optional music, gift-related media, a sharing link, and hosting status
 - public Postcard presentation data, including sender Wallet identity elements shown on a public Postcard page, such as a shortened Wallet address, Wallet avatar, or ENS-style name if available
@@ -57,7 +58,7 @@ Depending on how you use the Platform, Posted.art may process the following cate
 
 Posted.art collects personal data:
 
-- directly from you when you connect a Wallet, sign an authentication message, create a Postcard, submit Content, buy an Art Certificate, or contact Posted.art
+- directly from you when you connect a Wallet, authenticate through a supported account provider, sign an authentication message, create a Postcard, submit Content, buy an Art Certificate, or contact Posted.art
 - automatically when you browse or interact with the Platform
 - from public blockchain networks and related infrastructure, including Wallet, naming, avatar, and indexing services used to retrieve or display blockchain-linked information through the Platform
 - from service providers and infrastructure partners that help operate the Platform
@@ -68,7 +69,7 @@ Posted.art collects personal data:
 
 Posted.art uses cookies and similar technologies, including local storage and session storage, as part of operating the Platform. These technologies are used only for limited Platform functions, such as:
 
-- maintaining wallet-authenticated or session-related state
+- maintaining authenticated or session-related state
 - storing a wallet-authenticated session token, associated Wallet address, and issued-at time
 - storing a last-activity timestamp used to reset app state after extended inactivity
 - remembering whether an install prompt has already been shown
@@ -79,12 +80,46 @@ Posted.art also uses a temporary in-memory session cache for certain app data. T
 
 ---
 
-## 6. Purposes of Processing
+## 6. Google Account Sign-In
+
+Certain protected Platform features within the Android application may use Google Account sign-in provided through Android Credential Manager.
+
+When a user signs in using a Google Account, Posted.art may receive and process:
+
+- Google account identifier
+- email address
+- profile name
+- profile picture URL
+
+This information is used solely to:
+
+- authenticate the user with Posted.art services using secure token-based authentication
+- create and maintain an authenticated Platform session
+- display account-related identity information within the Platform
+- associate Postcards, favorites, and related Platform activity with the authenticated account
+
+Google Account information is retained only for as long as the related account remains active or as otherwise reasonably necessary to operate the Platform, maintain security, and comply with applicable legal obligations.
+
+---
+
+## 7. Scheduled Postcards and Notifications
+
+The Android application may allow users to prepare and schedule Postcards for future delivery or sending.
+
+Scheduled Postcards are stored locally on the user's device using encrypted local application storage. These locally scheduled drafts are not uploaded to Posted.art servers unless and until the user chooses to send or publish them through the Platform.
+
+The Android application may also use the Android notification system to provide reminders relating to scheduled Postcards stored on the device.
+
+These notifications are generated locally by the application and are used solely for Platform functionality and user-requested scheduling features.
+
+---
+
+## 8. Purposes of Processing
 
 Posted.art may process personal data to:
 
 - provide, operate, and maintain the Platform
-- authenticate Wallet-linked access and manage sessions
+- authenticate Platform access, manage sessions, and maintain account-related functionality
 - maintain Wallet-linked favorites and like functionality
 - create, host, display, and share Postcards
 - review and manage Create & Earn submissions
@@ -95,24 +130,24 @@ Posted.art may process personal data to:
 
 ---
 
-## 7. Legal Bases
+## 9. Legal Bases
 
 Where applicable law requires a legal basis for processing, Posted.art relies on the legal bases applicable to the relevant use of the Platform, including performance of a contract, consent where required, and legitimate interests in operating the Platform.
 
 ---
 
-## 8. Data Sharing
+## 10. Data Sharing
 
 Posted.art may share personal data with:
 
 - hosting, storage, content delivery, infrastructure, and other technical service providers that help operate the Platform
-- blockchain networks, smart contracts, Wallet providers, and public blockchain-linked indexing, naming, avatar, and display services used for Wallet-linked or NFT-related functionality
+- blockchain networks, smart contracts, Wallet providers, authentication providers, and public blockchain-linked indexing, naming, avatar, and display services used for Platform functionality
 
 Posted.art is not responsible for the privacy practices of third-party services. Posted.art does not sell personal data.
 
 ---
 
-## 9. International Processing
+## 11. International Processing
 
 Because Posted.art uses internet-based and blockchain-based infrastructure, personal data may be processed in countries outside your country of residence.
 
@@ -120,7 +155,7 @@ Public blockchain data and decentralized storage systems may involve global dist
 
 ---
 
-## 10. Retention
+## 12. Retention
 
 Posted.art keeps personal data only for as long as reasonably necessary for the purposes described in this Privacy Policy.
 
@@ -135,7 +170,7 @@ By category, this generally means:
 
 ---
 
-## 11. Security
+## 13. Security
 
 Posted.art uses reasonable technical and organizational measures intended to protect personal data appropriate to the nature of the Platform and the data involved.
 
@@ -145,7 +180,7 @@ You are responsible for protecting your Wallet, private keys, seed phrases, devi
 
 ---
 
-## 12. Your Rights
+## 14. Your Rights and Account Deletion
 
 Depending on your location and applicable law, you may have rights relating to your personal data, including the right to:
 
@@ -157,7 +192,11 @@ Depending on your location and applicable law, you may have rights relating to y
 - request data portability where applicable
 - lodge a complaint with a supervisory authority
 
-Users can directly manage and remove certain Platform-controlled data through the app itself, including deleting their own Postcards, changing favorites and like-related state, disconnecting their Wallet, and clearing browser-stored app data on their own device.
+Users can directly manage and remove certain Platform-controlled data through the app itself, including deleting their own Postcards, changing favorites and like-related state, disconnecting their Wallet, clearing browser-stored app data on their own device, and permanently deleting their account through the Platform settings interface where available.
+
+For Android application users, Posted.art provides in-app account deletion functionality. Users may permanently delete their account and associated Platform data directly within the app through the Settings section. Users who have already uninstalled the app may also request account and data deletion using the contact details referenced in the [FAQ](./faq.md#how-can-i-contact-postedart).
+
+Account deletion permanently removes applicable account-related personal data, authentication records, favorites, Postcards, and other user-generated Platform data from Posted.art production systems, except where retention is required for legal, security, fraud-prevention, transactional, or technical reasons.
 
 These rights are not absolute and may be limited by applicable law, technical constraints, Platform architecture, or the public and immutable nature of blockchain systems. Posted.art cannot delete or alter public blockchain records or data stored through decentralized systems not controlled by Posted.art.
 
@@ -167,7 +206,7 @@ The Platform is not designed as a service specifically for children. Posted.art 
 
 ---
 
-## 13. Public Data
+## 15. Public Data
 
 Some data processed through the Platform is intentionally public by design, including public Postcard links and their visible contents during the hosting period, sender identity elements shown on public Postcard pages, public blockchain transaction data, Art Certificate ownership and transfer records visible on-chain, and public Content and metadata displayed through the Platform.
 
@@ -176,7 +215,7 @@ Public blockchain and decentralized storage data remains visible independently o
 
 ---
 
-## 14. Changes and Contact
+## 16. Changes and Contact
 
 Posted.art may update this Privacy Policy from time to time. An updated version becomes effective when posted, unless a later effective date is stated.
 

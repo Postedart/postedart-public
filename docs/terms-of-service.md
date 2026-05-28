@@ -1,6 +1,6 @@
 # Terms of Service
 
-Effective date: April 1, 2026
+Effective date: June 1, 2026
 
 These Terms of Service (the "Terms") govern access to and use of the Posted.art platform, including the website, web application, mobile-first application experience, hosted Postcard pages, smart-contract-enabled ownership flows, and related services, features, content, and functionality that link to or reference these Terms (collectively, the "Platform").
 
@@ -49,7 +49,9 @@ Posted.art separates content usage, content creation, and content ownership. Usi
 
 ## 3. Access and Wallet
 
-The Platform supports public browsing, but certain features require Wallet-linked access. Where Wallet-linked access is required, you must connect a supported Wallet and sign an authentication message to verify control of that Wallet. That authentication message is not, by itself, a blockchain transaction.
+The Platform supports public browsing, but certain features require authenticated access through a supported Wallet or account authentication provider.
+
+Where Wallet-linked access is used, you must connect a supported Wallet and sign an authentication message to verify control of that Wallet. Certain Platform experiences may instead use supported account authentication providers. That authentication message is not, by itself, a blockchain transaction.
 
 You are solely responsible for your Wallet, private keys, seed phrases, devices, credentials, and all activity conducted through your Wallet. Posted.art does not control or custody your Wallet and cannot recover access to it or reverse blockchain transactions.
 
@@ -57,9 +59,11 @@ You are solely responsible for your Wallet, private keys, seed phrases, devices,
 
 ## 4. Postcards
 
-Postcards are temporary hosted items made available through the Platform. Postcards do not represent ownership of Content and are not NFTs. Creating, sending, receiving, viewing, or sharing a Postcard does not transfer copyright or other intellectual property rights in any Content.
+Postcards are temporary hosted items made available through the Platform.
+Certain Platform experiences may allow users to locally prepare or schedule Postcards for future sending or publication.
+Postcards do not represent ownership of Content and are not NFTs. Creating, sending, receiving, viewing, or sharing a Postcard does not transfer copyright or other intellectual property rights in any Content.
 
-Postcards are made available through Platform-controlled hosting for a limited period and may be removed through expiration, deletion, infrastructure failure, or other operational events. Once removed, a Postcard is no longer available through the Platform.
+Postcards are made available through Platform-controlled hosting for a limited period and may be removed through expiration, deletion, infrastructure failure, or other operational events. Once removed, expired, or deleted, a Postcard may no longer be available through the Platform.
 
 You are solely responsible for the messages, media, and other materials you include in a Postcard.
 
