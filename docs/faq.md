@@ -113,7 +113,7 @@ Posted.art uses reference pricing for the following product types:
 - Pay-as-you-use 30-day hosting extension: **+$0.09**
 - Telegram Postcard with 5 days hosting: **49 Stars**
 - Telegram 30-day hosting extension: **+9 Stars**
-- Android subscription model: **$0.99 per month** for continued Postcard sending with 30-day hosting
+- Android subscription model: **EUR 0.99 per month excluding VAT** for continued Postcard sending with 30-day hosting
 - Image Art Certificate (NFT): **$0.99**
 - Video Art Certificate (NFT): **$1.99**
 - Premium Art Certificates (NFT): price set by the creator
@@ -121,7 +121,7 @@ Posted.art uses reference pricing for the following product types:
 Art Certificate prices are displayed in local fiat currencies based on the user’s region for presentation.  
 Payments are executed using the payment asset shown in the selected network or payment flow.
 
-In app-store subscription flows, the store may display and charge the subscription price in the user's local currency according to that store's pricing and billing rules.
+In Android app-store subscription flows, Google Play determines the final local price and currency shown to the user according to Google Play pricing and billing rules.
 
 ### Is there a fair usage limit for Postcards?
 
