@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Effective date: June 1, 2026
+Effective date: July 1, 2026
 
 This Privacy Policy explains how Posted.art processes personal data in connection with the Posted.art platform, including the website, web application, mobile-first application experience, hosted Postcard pages, smart-contract-enabled ownership flows, and related services, features, content, and functionality that link to or reference this Privacy Policy (collectively, the "Platform").
 
@@ -44,6 +44,7 @@ Depending on how you use the Platform, Posted.art may process the following cate
 - account-related identity data provided through supported authentication providers, including limited profile and account information used for authenticated Platform access
 - technical data limited to what is needed to operate the Platform, including IP-based location handling and browser language detection
 - Postcard-related data, including selected Content, any personal written message, optional music, gift-related media, a sharing link, and hosting status
+- subscription and payment verification data for native app subscriptions, including product identifiers, subscription status, transaction identifiers, signed transaction information, entitlement status, renewal, expiry, cancellation, and related timestamps
 - public Postcard presentation data, including sender Wallet identity elements shown on a public Postcard page, such as a shortened Wallet address, Wallet avatar, or ENS-style name if available
 - creator submission data, including uploaded Content, the Wallet address connected at the time of submission, and related Platform-side metadata
 - Wallet-linked favorites and like data, including Wallet address, content key, like status, like count, and related timestamps
@@ -60,6 +61,7 @@ Posted.art collects personal data:
 
 - directly from you when you connect a Wallet, authenticate through a supported account provider, sign an authentication message, create a Postcard, submit Content, buy an Art Certificate, or contact Posted.art
 - automatically when you browse or interact with the Platform
+- from native app stores and payment providers where needed to verify subscription purchases, renewal status, cancellation status, and app entitlements
 - from public blockchain networks and related infrastructure, including Wallet, naming, avatar, and indexing services used to retrieve or display blockchain-linked information through the Platform
 - from service providers and infrastructure partners that help operate the Platform
 
@@ -80,9 +82,9 @@ Posted.art also uses a temporary in-memory session cache for certain app data. T
 
 ---
 
-## 6. Google Account Sign-In
+## 6. Native App Account Sign-In
 
-Certain protected Platform features within the Android application may use Google Account sign-in provided through Android Credential Manager.
+Certain protected Platform features within native mobile applications may use platform account sign-in, including Google Account sign-in on Android through Android Credential Manager and Apple account sign-in on iOS through Sign in with Apple.
 
 When a user signs in using a Google Account, Posted.art may receive and process:
 
@@ -91,6 +93,14 @@ When a user signs in using a Google Account, Posted.art may receive and process:
 - profile name
 - profile picture URL
 
+When a user signs in using an Apple account, Posted.art may receive and process:
+
+- Apple stable user identifier
+- email address, if shared by the user or provided through Apple's private relay service
+- profile name, if provided by the user during Apple account sign-in
+
+Apple does not provide a profile picture through Sign in with Apple. iOS users may optionally upload their own profile image through the application. If provided, Posted.art may process and store the uploaded profile image for account display and public Postcard sender identity where applicable.
+
 This information is used solely to:
 
 - authenticate the user with Posted.art services using secure token-based authentication
@@ -98,17 +108,17 @@ This information is used solely to:
 - display account-related identity information within the Platform
 - associate Postcards, favorites, and related Platform activity with the authenticated account
 
-Google Account information is retained only for as long as the related account remains active or as otherwise reasonably necessary to operate the Platform, maintain security, and comply with applicable legal obligations.
+Native app account information is retained only for as long as the related account remains active or as otherwise reasonably necessary to operate the Platform, maintain security, and comply with applicable legal obligations.
 
 ---
 
 ## 7. Scheduled Postcards and Notifications
 
-The Android application may allow users to prepare and schedule Postcards for future delivery or sending.
+Supported native mobile applications may allow users to prepare and schedule Postcards for future delivery or sending.
 
-Scheduled Postcards are stored locally on the user's device using encrypted local application storage. These locally scheduled drafts are not uploaded to Posted.art servers unless and until the user chooses to send or publish them through the Platform.
+Scheduled Postcards are stored locally on the user's device using local application storage. These locally scheduled drafts are not uploaded to Posted.art servers unless and until the user chooses to send or publish them through the Platform.
 
-The Android application may also use the Android notification system to provide reminders relating to scheduled Postcards stored on the device.
+Native mobile applications may also use the device notification system to provide reminders relating to scheduled Postcards stored on the device.
 
 These notifications are generated locally by the application and are used solely for Platform functionality and user-requested scheduling features.
 
@@ -141,6 +151,8 @@ Where applicable law requires a legal basis for processing, Posted.art relies on
 Posted.art may share personal data with:
 
 - hosting, storage, content delivery, infrastructure, and other technical service providers that help operate the Platform
+- native app stores and payment providers used to process and verify app subscriptions and related entitlements
+- sticker search and media providers, such as GIPHY, where a user uses sticker search or sticker-related features in a native app
 - blockchain networks, smart contracts, Wallet providers, authentication providers, and public blockchain-linked indexing, naming, avatar, and display services used for Platform functionality
 
 Posted.art is not responsible for the privacy practices of third-party services. Posted.art does not sell personal data.
@@ -194,7 +206,7 @@ Depending on your location and applicable law, you may have rights relating to y
 
 Users can directly manage and remove certain Platform-controlled data through the app itself, including deleting their own Postcards, changing favorites and like-related state, disconnecting their Wallet, clearing browser-stored app data on their own device, and permanently deleting their account through the Platform settings interface where available.
 
-For Android application users, Posted.art provides in-app account deletion functionality. Users may permanently delete their account and associated Platform data directly within the app through the Settings section. Users who have already uninstalled the app may also request account and data deletion using the contact details referenced in the [FAQ](./faq.md#how-can-i-contact-postedart).
+For native mobile application users, Posted.art provides in-app account deletion functionality. Users may permanently delete their account and associated Platform data directly within the app through the Settings section. Users who have already uninstalled the app may also request account and data deletion using the contact details referenced in the [FAQ](./faq.md#how-can-i-contact-postedart).
 
 Account deletion permanently removes applicable account-related personal data, authentication records, favorites, Postcards, and other user-generated Platform data from Posted.art production systems, except where retention is required for legal, security, fraud-prevention, transactional, or technical reasons.
 

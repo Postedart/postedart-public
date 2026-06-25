@@ -37,7 +37,7 @@ Posted.art is designed around a simple Postcard proposition:
 
 - each user can send **one Postcard per month for free**
 - after the free allowance, the active platform flow determines the next step
-- Android uses a subscription model for continued Postcard sending
+- Android and iOS use a subscription model for continued Postcard sending
 - Web/EVM, Solana, and Telegram use pay-as-you-use Postcard flows
 - subscription-based sending has a fair-usage limit of **20 active Postcards** at the same time
 

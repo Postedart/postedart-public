@@ -19,13 +19,13 @@ Hosting depends on the selected product flow.
 
 - Pay-as-you-use Postcards include **5 days** of hosting by default.
 - Pay-as-you-use flows can extend hosting to **30 days total** during confirmation.
-- Android subscription Postcards include **30 days** of hosting.
+- Android and iOS subscription Postcards include **30 days** of hosting.
 
 Expired or deleted Postcards are removed from active hosting and can no longer be retrieved.
 
 ### Can I schedule a Postcard?
 
-Yes, on Android.
+Yes, on supported native mobile apps.
 
 Scheduled Postcards are stored locally on the user's phone as drafts. The app sends a notification reminder at the selected date and time.
 
@@ -79,7 +79,7 @@ This creates a wallet‑authenticated session.
 - Wallet connection replaces traditional accounts
 - Signature authentication replaces traditional username/password login and creates a wallet-authenticated session
 
-On Android, protected Postcard actions use Google account sign-in instead of a wallet.
+On Android and iOS, protected Postcard actions use the platform account sign-in method instead of a wallet.
 
 ### When do I need to authenticate?
 
@@ -92,7 +92,7 @@ Authentication is required only for protected app actions, such as:
 
 Viewing Postcards does not require authentication.
 
-The authentication method depends on the platform. Web/EVM flows use wallet authentication. Android uses Google account sign-in for its Postcard-only app flow.
+The authentication method depends on the platform. Web/EVM flows use wallet authentication. Android uses Google account sign-in and iOS uses Apple account sign-in for Postcard-only app flows.
 
 
 ## Art Certificates
@@ -113,21 +113,20 @@ Posted.art uses reference pricing for the following product types:
 - Pay-as-you-use 30-day hosting extension: **+$0.09**
 - Telegram Postcard with 5 days hosting: **49 Stars**
 - Telegram 30-day hosting extension: **+9 Stars**
-- Android subscription model: **EUR 0.99 per month excluding VAT** for continued Postcard sending with 30-day hosting
+- Subscription model: **EUR 0.99 per month** including applicable taxes where required, for sending unlimited Postcards with 30-day hosting.
 - Image Art Certificate (NFT): **$0.99**
 - Video Art Certificate (NFT): **$1.99**
 - Premium Art Certificates (NFT): price set by the creator
 
-Art Certificate prices are displayed in local fiat currencies based on the user’s region for presentation.  
-Payments are executed using the payment asset shown in the selected network or payment flow.
+Web-app prices are displayed in local fiat currencies based on the user’s region for presentation. Payments are executed using the payment asset shown in the selected network or payment flow.
 
-In Android app-store subscription flows, Google Play determines the final local price and currency shown to the user according to Google Play pricing and billing rules.
+In Android and Apple app-store subscription flows, the app-store determines the final local price and currency shown to the user according to app-store pricing and billing rules.
 
 ### Is there a fair usage limit for Postcards?
 
 Yes.
 
-Android subscription-based Postcard sending is designed as unlimited normal usage, with a fair-usage limit of **20 active Postcards** at the same time.
+Android and iOS subscription-based Postcard sending is designed as unlimited normal usage, with a fair-usage limit of **20 active Postcards** at the same time.
 
 If a user already has 20 active hosted Postcards, a new Postcard cannot be created until some active Postcards expire or are deleted.
 
@@ -139,7 +138,7 @@ Several payment and entitlement models exist:
 - Web/EVM Postcards → pay-as-you-use wallet-based payment flow after the free monthly Postcard
 - Solana Postcards → pay-as-you-use Solana payment flow after the free monthly Postcard
 - Telegram Postcards → pay-as-you-use Telegram Stars flow after the free monthly Postcard
-- Android Postcards → app-store subscription model after the free monthly Postcard
+- Android and iOS Postcards → app-store subscription model after the free monthly Postcard
 - Future native mobile apps may use a similar subscription model if released
 - Art Certificates (NFTs) → executed via smart contracts, paid and minted on-chain
 
@@ -151,7 +150,7 @@ This depends on the active platform flow.
 
 Pay-as-you-use Postcards include **5 days** of hosting by default and can extend hosting to **30 days total** during confirmation.
 
-Android subscription Postcards include **30 days** of hosting by default.
+Android and iOS subscription Postcards include **30 days** of hosting by default.
 
 ### Which products are available on each platform?
 
@@ -161,6 +160,7 @@ Platform availability:
 
 - Web/EVM app: Postcards, Create & Earn, and Art Certificates
 - Android app: Postcards only
+- iOS app: Postcards only
 - Telegram app: Postcards only
 - Solana flows: Postcards only
 
@@ -254,7 +254,7 @@ Blockchain is used for secure payments, ownership, and authentication where bloc
 
 Wallet-based authentication replaces traditional accounts by using signed messages, providing a highly secure way to verify user identity without passwords.
 
-Some platform-specific Postcard flows use non-wallet authentication or payment rails, such as Google account sign-in on Android, Telegram Stars, or app-store subscriptions.
+Some platform-specific Postcard flows use non-wallet authentication or payment rails, such as Google account sign-in on Android, Apple account sign-in on iOS, Telegram Stars, or app-store subscriptions.
 
 ### What file formats and sizes are supported?
 
@@ -365,6 +365,7 @@ Postcard payment and entitlement flows:
 - Solana (SOL)
 - Telegram (Stars)
 - Android (subscription)
+- iOS (subscription)
 
 Art Certificates (NFTs):
 

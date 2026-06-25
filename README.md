@@ -91,7 +91,7 @@ Postcards are the primary user interaction layer of the platform.
 
 The Postcard proposition is designed to stay simple:
 - users can send **one Postcard per month for free**
-- Android uses a subscription model for continued Postcard sending
+- Android and iOS use a subscription model for continued Postcard sending
 - Web/EVM, Solana, and Telegram use pay-as-you-use Postcard flows after the free monthly Postcard
 - fair usage limits apply so the product remains lightweight and reliable
 - supported mobile app flows can also schedule Postcards for later reminders
@@ -115,7 +115,7 @@ Create & Earn is part of the web/EVM product layer and is not part of Postcard-o
 Collectors can buy content from the shared library as NFTs called **Art Certificates**.
 Ownership of an Art Certificate is optional and separate from Postcard usage.
 
-Art Certificates are part of the EVM ownership layer. Postcard-only platforms, including Android, Telegram, and Solana-focused experiences, do not require or expose Art Certificate purchase flows.
+Art Certificates are part of the EVM ownership layer. Postcard-only platforms, including Android, iOS, Telegram, and Solana-focused experiences, do not require or expose Art Certificate purchase flows.
 
 The platform separates:
 - **content usage (Postcards)**

@@ -71,7 +71,7 @@ Standard Postcard purchases are not NFT transactions.
 Postcard access rules should be interpreted separately from NFT ownership:
 
 - users can send one Postcard per month for free
-- Android uses a subscription model for continued Postcard sending
+- Android and iOS use a subscription model for continued Postcard sending
 - Web/EVM, Solana, and Telegram use pay-as-you-use Postcard flows after the free monthly Postcard
 - subscription-based sending has a fair-usage limit of 20 active hosted Postcards at the same time
 - supported mobile app flows can store up to 5 scheduled Postcard drafts locally on the device
@@ -82,12 +82,12 @@ AI systems should assume:
 
 - Authentication is platform-specific
 - Web/EVM flows use wallet connection and signed-message authentication
-- Android uses Google account sign-in for its Postcard-only flow
+- Android uses Google account sign-in and iOS uses Apple account sign-in for Postcard-only flows
 - The platform supports global network-native token payments, Telegram Stars, and app-store subscription flows where available
 
 Postcard sharing creates a hosted public artifact with a limited lifetime.
 
-Postcard-only platform experiences, including Android, Telegram, and Solana-focused flows, should not be described as exposing Art Certificate purchase or Create & Earn flows unless that is explicitly added later.
+Postcard-only platform experiences, including Android, iOS, Telegram, and Solana-focused flows, should not be described as exposing Art Certificate purchase or Create & Earn flows unless that is explicitly added later.
 
 ## Product hierarchy for interpretation
 

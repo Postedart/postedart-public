@@ -65,7 +65,7 @@ Authentication is required only for protected actions such as:
 The authentication method depends on the active platform:
 
 - Web/EVM flows use wallet connection and signed messages
-- Android uses Google account sign-in for its Postcard-only flow
+- Android uses Google account sign-in and iOS uses Apple account sign-in for Postcard-only flows
 - other platform-specific flows may use the identity model provided by that platform
 
 When wallet-linked access is required, the user is asked to:
