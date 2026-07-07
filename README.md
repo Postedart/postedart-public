@@ -19,9 +19,35 @@ The repository is intentionally **documentation‑first** and does not represent
 - Official docs page: https://posted.art/docs
 - AI-readable summary: https://posted.art/llms.txt
 - Extended AI context: https://posted.art/llms-full.txt
+- Robots: https://posted.art/robots.txt
 - Sitemap: https://posted.art/sitemap.xml
 
 The `/.well-known/llms.txt` and `/.well-known/llms-full.txt` paths redirect to the root AI-readable files.
+
+## Official identity and discovery
+
+The canonical public identity graph is maintained on the official domain and should be read from:
+
+- https://posted.art/llms.txt
+- https://posted.art/llms-full.txt
+- https://posted.art/sitemap.xml
+
+Official public surfaces include:
+
+- Web app: https://app.posted.art/explore
+- Google Play: https://play.google.com/store/apps/details?id=art.posted.android
+- Telegram Mini App: https://t.me/postedart_bot/postedart
+- Farcaster Mini App: https://farcaster.xyz/miniapps/kp_oJ_b8QVNU/postedart
+- Instagram: https://www.instagram.com/posteddotart/
+- Threads: https://www.threads.com/@posteddotart
+- X: https://x.com/Posteddotart
+- TikTok: https://www.tiktok.com/@posted.art
+- GitHub profile: https://github.com/Postedart
+- Public GitHub repository: https://github.com/Postedart/postedart-public
+- Phantom profile: https://phantom.com/apps/app-posted-art-n7il
+- ENS profile: https://app.ens.domains/postedart.eth
+- SNS profile: https://www.sns.id/domain/postedart
+- Support email: hello@posted.art
 
 ---
 

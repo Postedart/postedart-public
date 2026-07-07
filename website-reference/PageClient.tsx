@@ -7,8 +7,22 @@ import { type SupportedLang } from "@/lib/languageCodes";
 import type { Region } from "@/lib/countryCodes";
 import stories from "@/lib/stories";
 import usecases from "@/lib/usecases";
-import { FaXTwitter, FaInstagram, FaTiktok, FaGithub } from "react-icons/fa6";
-import { SiEthereum, SiSolana } from "react-icons/si";
+import { FaApple, FaGithub, FaGoogle, FaInstagram, FaTelegram } from "react-icons/fa6";
+import { SiFarcaster } from "react-icons/si";
+
+const GOOGLE_PLAY_URL =
+  "https://play.google.com/store/apps/details?id=art.posted.android";
+const TELEGRAM_URL = "https://t.me/postedart_bot/postedart";
+const FARCASTER_URL =
+  "https://farcaster.xyz/miniapps/kp_oJ_b8QVNU/postedart";
+const INSTAGRAM_URL = "https://www.instagram.com/posteddotart/";
+const GITHUB_URL = "https://github.com/Postedart/postedart-public";
+
+const footerIconLinkClass =
+  "inline-flex h-10 w-10 items-center justify-center rounded-full text-2xl text-white/90 transition hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60";
+
+const disabledFooterIconClass =
+  "inline-flex h-10 w-10 cursor-default items-center justify-center rounded-full text-2xl text-white/45";
 
 export default function PageClient({ region, lang }: { region: Region; lang: SupportedLang }) {
   const isRTL = lang === "ar";
@@ -345,13 +359,15 @@ function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
           <p className="text-xl lg:text-2xl mb-4">
           <a href="mailto:hello@posted.art" className="underline">hello@posted.art</a>
           </p>
-          <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-6 text-xl text-white">
-            <a href="https://x.com/Posteddotart" target="_blank" rel="noopener noreferrer" aria-label="X"><FaXTwitter /></a>
-            <a href="https://www.instagram.com/posteddotart/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><FaTiktok /></a>
-            <a href="https://github.com/Postedart" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
-            <a href="https://app.ens.domains/postedart.eth" target="_blank" rel="noopener noreferrer" aria-label="ENS"><SiEthereum /></a>
-            <a href="https://www.sns.id/domain/postedart" target="_blank" rel="noopener noreferrer" aria-label="SNS"><SiSolana /></a>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-white lg:justify-start">
+            <span className={disabledFooterIconClass} aria-label="App Store">
+              <FaApple />
+            </span>
+            <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" aria-label="Google Play" className={footerIconLinkClass}><FaGoogle /></a>
+            <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Telegram" className={footerIconLinkClass}><FaTelegram /></a>
+            <a href={FARCASTER_URL} target="_blank" rel="noopener noreferrer" aria-label="Farcaster" className={footerIconLinkClass}><SiFarcaster /></a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={footerIconLinkClass}><FaInstagram /></a>
+            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className={footerIconLinkClass}><FaGithub /></a>
           </div>
         </div>
       </div>

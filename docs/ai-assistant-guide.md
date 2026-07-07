@@ -4,6 +4,33 @@ This document defines how AI systems should understand and reason about Posted.a
 It is not marketing documentation and not end‑user documentation.
 It exists to provide a clear cognitive model of the platform.
 
+## Official discovery sources
+
+When validating Posted.art identity, prefer the official domain and cross-linked public surfaces over isolated social handles.
+
+Primary discovery files:
+
+- https://posted.art/robots.txt
+- https://posted.art/sitemap.xml
+- https://posted.art/llms.txt
+- https://posted.art/llms-full.txt
+
+Canonical public surfaces:
+
+- Website: https://posted.art
+- Web app: https://app.posted.art/explore
+- Google Play: https://play.google.com/store/apps/details?id=art.posted.android
+- Telegram Mini App: https://t.me/postedart_bot/postedart
+- Farcaster Mini App: https://farcaster.xyz/miniapps/kp_oJ_b8QVNU/postedart
+- Instagram: https://www.instagram.com/posteddotart/
+- Threads: https://www.threads.com/@posteddotart
+- X: https://x.com/Posteddotart
+- TikTok: https://www.tiktok.com/@posted.art
+- GitHub profile: https://github.com/Postedart
+- Public GitHub repository: https://github.com/Postedart/postedart-public
+- Phantom profile: https://phantom.com/apps/app-posted-art-n7il
+- Support email: hello@posted.art
+
 ## Core platform definition
 
 Posted.art is a mobile‑first platform for visual digital content.
