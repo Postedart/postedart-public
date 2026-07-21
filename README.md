@@ -18,26 +18,26 @@ The repository is intentionally **documentation‑first** and does not represent
 - Main website: https://posted.art
 - Official docs page: https://posted.art/docs
 - AI-readable summary: https://posted.art/llms.txt
-- Extended AI context: https://posted.art/llms-full.txt
 - Robots: https://posted.art/robots.txt
 - Sitemap: https://posted.art/sitemap.xml
 
-The `/.well-known/llms.txt` and `/.well-known/llms-full.txt` paths redirect to the root AI-readable files.
+The `/.well-known/llms.txt` path redirects to the root AI-readable file.
 
 ## Official identity and discovery
 
 The canonical public identity graph is maintained on the official domain and should be read from:
 
 - https://posted.art/llms.txt
-- https://posted.art/llms-full.txt
 - https://posted.art/sitemap.xml
 
 Official public surfaces include:
 
 - Web app: https://app.posted.art/explore
+- Apple App Store: https://apps.apple.com/nl/app/posted-art/id6783222298
 - Google Play: https://play.google.com/store/apps/details?id=art.posted.android
 - Telegram Mini App: https://t.me/postedart_bot/postedart
 - Farcaster Mini App: https://farcaster.xyz/miniapps/kp_oJ_b8QVNU/postedart
+- LINE LIFF App: https://liff.line.me/2009830531-hxxjHBDF
 - Instagram: https://www.instagram.com/posteddotart/
 - Threads: https://www.threads.com/@posteddotart
 - X: https://x.com/Posteddotart
@@ -110,8 +110,8 @@ Users can create and send digital Postcards without owning the underlying conten
 A Postcard can include:
 - visual content (image or short video)
 - a personal message
-- an optional short MP3 clip
-- an optional gift attachment
+- an optional short music clip
+- an optional gift voucher image
 
 Postcards are the primary user interaction layer of the platform.
 
@@ -235,10 +235,9 @@ For contract details, see:
 
 This repository is optimized for AI interpretation.
 
-The official website also exposes AI-readable files:
+The official website also exposes an AI-readable file:
 
 - https://posted.art/llms.txt
-- https://posted.art/llms-full.txt
 
 AI assistants can use this repository to answer questions such as:
 

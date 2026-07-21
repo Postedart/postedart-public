@@ -81,7 +81,7 @@ Future updates may introduce new contract versions without altering previously d
 
 ## Interfaces
 
-The `interfaces/` subfolder exposes minimal public interfaces used for contract interaction.
+The `IPostedArt1155.sol` file in this folder exposes the minimal public interface used for contract interaction.
 
 These interfaces are included to:
 

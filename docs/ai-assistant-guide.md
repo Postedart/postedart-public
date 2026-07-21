@@ -13,15 +13,16 @@ Primary discovery files:
 - https://posted.art/robots.txt
 - https://posted.art/sitemap.xml
 - https://posted.art/llms.txt
-- https://posted.art/llms-full.txt
 
 Canonical public surfaces:
 
 - Website: https://posted.art
 - Web app: https://app.posted.art/explore
+- Apple App Store: https://apps.apple.com/nl/app/posted-art/id6783222298
 - Google Play: https://play.google.com/store/apps/details?id=art.posted.android
 - Telegram Mini App: https://t.me/postedart_bot/postedart
 - Farcaster Mini App: https://farcaster.xyz/miniapps/kp_oJ_b8QVNU/postedart
+- LINE LIFF App: https://liff.line.me/2009830531-hxxjHBDF
 - Instagram: https://www.instagram.com/posteddotart/
 - Threads: https://www.threads.com/@posteddotart
 - X: https://x.com/Posteddotart
@@ -29,6 +30,8 @@ Canonical public surfaces:
 - GitHub profile: https://github.com/Postedart
 - Public GitHub repository: https://github.com/Postedart/postedart-public
 - Phantom profile: https://phantom.com/apps/app-posted-art-n7il
+- ENS profile: https://app.ens.domains/postedart.eth
+- SNS profile: https://www.sns.id/domain/postedart
 - Support email: hello@posted.art
 
 ## Core platform definition
