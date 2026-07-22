@@ -1,6 +1,8 @@
 # Posted.art Public
 
-Posted.art is a mobile‑first platform for visual digital content built around three core products:
+Posted.art helps people send personal digital Postcards that feel closer to opening real post than receiving another link. People choose an image or short video, write a message for one person, and can optionally add a short music clip or gift voucher image. The recipient opens a digital envelope made for the moment.
+
+Beyond Postcards, Posted.art supports creator participation and optional ownership through three connected products:
 
 - **Postcards**  
 - **Create & Earn**  
@@ -39,6 +41,7 @@ Official public surfaces include:
 - Farcaster Mini App: https://farcaster.xyz/miniapps/kp_oJ_b8QVNU/postedart
 - LINE LIFF App: https://liff.line.me/2009830531-hxxjHBDF
 - Instagram: https://www.instagram.com/posteddotart/
+- LinkedIn: https://www.linkedin.com/company/postedart
 - Threads: https://www.threads.com/@posteddotart
 - X: https://x.com/Posteddotart
 - TikTok: https://www.tiktok.com/@posted.art
@@ -53,9 +56,9 @@ Official public surfaces include:
 
 ## Why Posted.art exists
 
-Digital communication has become instant, global, and visual, yet meaningful digital gifting has not evolved at the same pace.
+Digital communication has become instant, global, and visual, yet a personal message can still arrive as little more than another link in a chat.
 
-Posted.art restores emotional context to digital interaction by combining visual expression, creator participation, and optional ownership into a single mobile‑first system.
+Posted.art restores emotional context through personal digital Postcards, then connects that experience to creator participation and optional ownership.
 
 The platform is built on three core beliefs:
 
@@ -72,7 +75,7 @@ Posted.art introduces direct participation in asset value through Create & Earn,
 ### 3. Usage and ownership should be independent
 
 Digital culture benefits when participation does not require prior ownership.  
-Users can use visual content socially through Postcards, while collectors can optionally acquire ownership through Art Certificates.
+People can use visual content in personal Postcards, while collectors can optionally acquire ownership through Art Certificates.
 
 ### 4. Global digital products require platform-aware access logic
 
@@ -93,19 +96,19 @@ Posted.art separates three core concepts while using the same shared content lib
 - **Content creation → Create & Earn**  
 - **Content ownership → Art Certificates**
 
-This separation allows the platform to support social sharing, creator participation, and digital collecting without forcing users into ownership before usage.
+This separation allows the platform to support personal sharing, creator participation, and digital collecting without forcing users into ownership before usage.
 
 ---
 
 ## Product overview
 
-Posted.art provides a large library of portrait‑oriented visual digital content designed for mobile viewing and sharing.
+Postcards are the primary Posted.art experience. People choose visual content from a shared library and turn it into something intended for one person.
 
 The same content library supports three distinct product interactions:
 
 ### 1. Postcards
 
-Users can create and send digital Postcards without owning the underlying content as an NFT.
+People can choose an image or short video, write a personal message, and optionally add a short music clip or gift voucher image.
 
 A Postcard can include:
 - visual content (image or short video)
@@ -113,7 +116,9 @@ A Postcard can include:
 - an optional short music clip
 - an optional gift voucher image
 
-Postcards are the primary user interaction layer of the platform.
+The recipient opens a digital envelope before the Postcard is revealed. No app, account, wallet, or NFT ownership is required to receive and view it.
+
+Sending or receiving a Postcard never requires ownership of the underlying content. Postcards are the primary user interaction layer of the platform.
 
 The Postcard proposition is designed to stay simple:
 - users can send **one Postcard per month for free**
@@ -129,10 +134,10 @@ Submissions are subject to review and policy approval.
 
 Approved content can:
 - be used in Postcards
-- become eligible for NFT sale as an Art Certificate
+- be offered as an Art Certificate (NFT)
 
 Create & Earn introduces a **direct creator revenue model**.  
-Content creators receive **90% of revenues from NFT sales**, which differs from advertisement‑driven revenue models used by traditional social platforms.
+For primary Art Certificate sales through Posted.art, creators receive **90% of the sale price** and the platform receives **10%**. This differs from advertisement‑driven revenue models used by traditional social platforms.
 
 Create & Earn is part of the web/EVM product layer and is not part of Postcard-only mobile app experiences.
 

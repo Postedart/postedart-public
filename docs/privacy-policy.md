@@ -14,7 +14,7 @@ By accessing or using the Platform, you acknowledge the practices described in t
 
 ## 1. Overview
 
-Posted.art is a mobile-first platform for visual digital content. The personal data processed by Posted.art varies depending on how you use the Platform.
+Posted.art provides personal digital Postcards, creator participation features, and optional digital ownership features. The personal data processed by Posted.art varies depending on how you use the Platform.
 
 ---
 

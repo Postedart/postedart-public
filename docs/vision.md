@@ -1,7 +1,10 @@
-Posted.art is a mobile‑first platform designed to reshape how visual digital content is experienced, shared, valued, and collected.
+# Vision
 
-It introduces a new behavioral layer for digital culture:  
-visual expression as a usable social medium, not only as a collectible asset.
+Posted.art starts with a simple question: can a digital Postcard feel as personal as opening real post?
+
+People choose an image or video, write a message for one person and can optionally add a short music clip or gift voucher image. The recipient opens a digital envelope made for the moment.
+
+Beyond that personal exchange, Posted.art gives digital creators a way to contribute original work and gives collectors an optional way to own selected work through Art Certificates.
 
 ---
 
@@ -35,7 +38,7 @@ Posted.art operates as a unified ecosystem composed of three connected product l
 
 ### Postcards  
 A structured format for meaningful digital expression.  
-Users can select visual content and transform it into intentional digital messages, restoring ritual and emotional framing to digital interaction.
+People can select visual content and transform it into personal digital Postcards, restoring ritual and emotional framing to digital interaction.
 
 Postcards are the broadest product layer across multiple platforms. The product supports a pay-as-you-use and a subscription-based model.
 
@@ -57,10 +60,10 @@ Posted.art is not designed as:
 
 - a traditional social network  
 - a conventional NFT marketplace  
-- a digital greeting card service  
+- a conventional template-driven digital greeting card service
 - or an advertising‑driven content platform  
 
-Instead, it positions visual digital content as a **socially usable cultural object**.
+Instead, it treats visual digital content as something people can use to carry a personal message, creators can contribute, and collectors can optionally own.
 
 This reflects a broader shift in digital behavior:
 

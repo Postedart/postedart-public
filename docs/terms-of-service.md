@@ -10,9 +10,9 @@ By accessing or using the Platform, you agree to be bound by these Terms. If you
 
 ## 1. Overview of the Platform
 
-Posted.art is a mobile-first platform for visual digital content built around three connected services (the "Services"):
+Posted.art provides hosted personal digital Postcards, creator participation, and optional digital ownership through three connected services (the "Services"):
 
-- **Postcards**: a hosted digital composition and sharing product
+- **Postcards**: a hosted personal digital Postcard creation, delivery, and sharing product
 - **Create & Earn**: a creator submission and participation product
 - **Art Certificates**: an ownership layer represented through non-fungible tokens ("NFTs")
 

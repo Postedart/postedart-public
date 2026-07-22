@@ -3,6 +3,8 @@
 This document explains how the Posted.art app works from a user perspective.  
 It describes page flow, public access, authentication requirements, and the main actions a user can take inside the app.
 
+The main journey is personal: choose visual content, write a message for one person, and share a digital Postcard that the recipient opens through a digital envelope.
+
 Posted.art uses a **public‑first access model**.  
 Users can browse the content library without creating an account and without using a traditional login/password system.
 
@@ -49,7 +51,8 @@ It can offer:
 
 - wallet app shortcuts, such as MetaMask or Phantom
 - WalletConnect as a broader wallet selection path
-- platform integrations such as Android, Telegram or Farcaster where available
+- native app options for iOS and Android
+- platform integrations such as Telegram or Farcaster where available
 - a browser continuation option for users who do not want to open another app
 
 The App Launcher exists because mobile wallet connection behavior depends heavily on the host app and operating system. Opening Posted.art inside a wallet or supported platform app can provide a more reliable flow than trying to connect an external wallet from a normal mobile browser.
@@ -151,7 +154,7 @@ It allows the user to create the message layer that will be combined with visual
 - **Text Editor** → edit message text and styling  
 - **Stickers** → open sticker panel  
 - **Background Color** → cycle color options  
-- **Music** → upload MP3 and select clip  
+- **Music** → upload a supported audio file and select a short clip
 - **Gift** → upload optional image of a gift voucher
 
 ### Purpose
@@ -174,15 +177,15 @@ The Share page is the final review and confirmation step of the **Postcards** fl
 It displays the complete Postcard composition:
 - visual content from the shared library  
 - rendered message  
-- optional MP3  
-- optional gift  
+- optional short music clip
+- optional gift voucher image
 
 ### Main actions
 
 - **Back** → return to `/write`  
 - **Send / Share** → open Postcard confirmation flow  
-- **Music** → preview attached MP3  
-- **Gift** → preview, add or edit  
+- **Music** → preview the attached music clip
+- **Gift** → preview, add or edit the gift voucher image
 
 The confirmation flow can include:
 
@@ -217,7 +220,7 @@ Scheduled Postcards:
 - remain visible as drafts after the reminder until sent or deleted
 - are limited to **5 scheduled Postcards** at the same time
 
-When a scheduled Postcard is reopened, the user can send it now, choose a new notification time, add a gift file, or delete it. The original Postcard composition is not edited from that recovery state.
+When a scheduled Postcard is reopened, the user can send it now, choose a new notification time, add a gift voucher image, or delete it. The original Postcard composition is not edited from that recovery state.
 
 ---
 
@@ -261,14 +264,18 @@ Recipients can view the Postcard without:
 - installing the app  
 - connecting a wallet  
 
+### Delivery experience
+
+The recipient first sees a digital envelope against a sky that changes with the time of day. Opening the envelope reveals the visual content and the personal message, together with any optional music or gift voucher image.
+
 ### Displays
 
 - visual content from the shared library  
 - rendered message  
 - sender wallet identity or platform-supported sender identity  
 - availability state  
-- optional gift  
-- optional MP3  
+- optional gift voucher image
+- optional short music clip
 
 ### Identity model
 
@@ -285,7 +292,7 @@ If the Postcard is no longer accessible, the page switches to an expired state.
 ### Actions
 
 - **Download card** → download rendered message card  
-- **Play / pause music** → control MP3 playback  
-- **View gift** → preview and download gift attachment  
+- **Play / pause music** → control music playback
+- **View gift** → preview and download the gift voucher image
 
 This page represents the final delivery experience of the Postcards product.

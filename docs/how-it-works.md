@@ -1,6 +1,8 @@
 # How it works
 
-Posted.art is built around three connected products:
+Posted.art helps people send personal digital Postcards that feel closer to opening real post than receiving another link. People choose an image or short video, write a message for one person, and can optionally add a short music clip or gift voucher image.
+
+The recipient opens a digital envelope made for the moment. Creator participation and optional ownership are connected to this primary Postcard experience through three products:
 - Postcards
 - Create & Earn
 - Art Certificates
@@ -11,25 +13,29 @@ All three products use the same shared visual content library, but support diffe
 
 ## 1. Postcards
 
-The Postcards product allows users to create and send a digital Postcard without owning the underlying content as an NFT. See the FAQ on [what a Postcard is](faq.md#what-is-a-postcard) for the full definition.
+The Postcards product allows people to turn visual content into something personal for one recipient. See the FAQ on [what a Postcard is](faq.md#what-is-a-postcard) for the full definition.
 
 A Postcard can include:
 - visual content (image or short video)
 - a personal message
-- an optional short MP3 clip
-- an optional gift attachment
+- an optional short music clip
+- an optional gift voucher image
 
 ### Basic Postcard flow
 
 1. The user selects visual content from the Posted.art library.
 2. The user opens the Postcard editor.
 3. The user adds a personal message.
-4. The user may optionally add stickers, a short MP3 clip, or a gift attachment.
+4. The user may optionally add stickers, a short music clip, or a gift voucher image.
 5. The user reviews the Postcard composition.
 6. The user chooses to send the Postcard now or, where supported, schedule it for later.
 7. The app checks the free monthly allowance, subscription state, fair-usage limits, and payment requirements where applicable.
 8. The user confirms the Postcard action.
 9. The Postcard is finalized and becomes available for sharing during its active hosting period, or stored locally as a scheduled draft where scheduling is supported.
+
+### Receiving a Postcard
+
+The recipient opens the shared link without needing to install an app, create an account, connect a wallet, or own an NFT. A digital envelope introduces the delivery experience before revealing the visual content, personal message, and any optional music or gift voucher image.
 
 ### Postcard access and pricing model
 
@@ -53,7 +59,7 @@ In that model:
 2. the user chooses a reminder time between **1 hour** and **1 month** from now
 3. the app schedules a local notification
 4. the scheduled draft appears in the user's Postcards area
-5. when opened from the notification or Postcards area, the user can send it, choose a new reminder time, add a gift file, delete it, or leave it as a draft
+5. when opened from the notification or Postcards area, the user can send it, choose a new reminder time, add a gift voucher image, delete it, or leave it as a draft
 
 To keep device storage lightweight, the app limits scheduled drafts to **5 scheduled Postcards** at the same time.
 
@@ -64,7 +70,7 @@ Sending a Postcard does **not** require ownership of the underlying content as a
 See also: [Do I need to buy an NFT to send a Postcard?](faq.md#do-i-need-to-buy-an-nft-to-send-a-postcard) and [How long does a Postcard stay online?](faq.md#how-long-does-a-postcard-stay-online)
 
 This reflects a core Posted.art principle:
-- **Postcards** enable content usage and social expression  
+- **Postcards** enable content usage and personal expression
 - **Art Certificates** enable optional ownership and collecting  
 
 ---
@@ -83,7 +89,7 @@ For more detail, see [What does "subject to review and policy guidelines" mean?]
 2. The content is submitted for review.
 3. Posted.art evaluates the submission against product and policy requirements.
 4. Approved content is added to the content library.
-5. Approved content becomes available for Postcards usage and can be purchased as Art Certificates.
+5. Approved content becomes available for Postcard use and can be offered as Art Certificates.
 
 Create & Earn is separate from standard consumer postcard usage.
 

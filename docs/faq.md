@@ -4,14 +4,16 @@
 ## Postcards
 ### What is a Postcard?
 
-A Postcard is a hosted digital composition that includes:
+A Postcard is a personal digital card made for one person and designed to feel closer to opening real post than receiving another link.
+
+It is a hosted digital composition that includes:
 
 - visual content (image or video)
 - a personal message
 - an optional short music clip
 - an optional gift voucher image
 
-Postcards are designed for mobile viewing and sharing.
+The recipient opens a digital envelope before the Postcard is revealed. Postcards are designed for mobile viewing and sharing.
 
 ### How long does a Postcard stay online?
 
@@ -36,11 +38,11 @@ Scheduling rules:
 - users can store up to **5 scheduled Postcards** at the same time
 - scheduled Postcards remain available as drafts after the reminder notification until the user sends or deletes them
 
-When a scheduled Postcard is opened, the user can send it, choose a new reminder time, delete it, or add a gift file. The already prepared Postcard content itself is not edited from that recovery flow.
+When a scheduled Postcard is opened, the user can send it, choose a new reminder time, delete it, or add a gift voucher image. The already prepared Postcard content itself is not edited from that recovery flow.
 
 ### What happens when someone receives a Postcard?
 
-Recipients receive a link to a hosted Postcard page.
+Recipients receive a link to a hosted Postcard page. They open a digital envelope before the personal Postcard is revealed.
 
 They can:
 
@@ -181,7 +183,7 @@ Submitted content is subject to:
 Approved content can then be:
 
 - used in Postcards
-- sold as NFTs
+- offered as Art Certificates (NFTs)
 
 ### What does "subject to review and policy guidelines" mean?
 
@@ -246,7 +248,7 @@ Most content is AI‑generated, but the platform also supports and actively enco
 
 No.
 
-Posted.art is a **visual communication platform with optional digital ownership**, not a traditional social media platform.
+Posted.art is centered on personal digital Postcards, with creator participation and optional digital ownership. It is not a traditional social media platform or general chat service.
 
 ### Why does Posted.art use blockchain?
 
