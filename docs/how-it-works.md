@@ -1,6 +1,6 @@
 # How it works
 
-Posted.art helps people send personal digital Postcards that feel closer to opening real post than receiving another link. People choose an image or short video, write a message for one person, and can optionally add a short music clip or gift voucher image.
+Posted.art helps people send personal digital Postcards that feel closer to opening real post than receiving another link. People choose an image or short video, write a message for one person, and can optionally add a short music clip, voice message, or gift voucher image.
 
 The recipient opens a digital envelope made for the moment. Creator participation and optional ownership are connected to this primary Postcard experience through three products:
 - Postcards
@@ -18,7 +18,7 @@ The Postcards product allows people to turn visual content into something person
 A Postcard can include:
 - visual content (image or short video)
 - a personal message
-- an optional short music clip
+- optional audio, such as a short music clip or voice message
 - an optional gift voucher image
 
 ### Basic Postcard flow
@@ -26,7 +26,7 @@ A Postcard can include:
 1. The user selects visual content from the Posted.art library.
 2. The user opens the Postcard editor.
 3. The user adds a personal message.
-4. The user may optionally add stickers, a short music clip, or a gift voucher image.
+4. The user may optionally add stickers, a short music clip, a voice message where supported, or a gift voucher image.
 5. The user reviews the Postcard composition.
 6. The user chooses to send the Postcard now or, where supported, schedule it for later.
 7. The app checks the free monthly allowance, subscription state, fair-usage limits, and payment requirements where applicable.
@@ -35,7 +35,7 @@ A Postcard can include:
 
 ### Receiving a Postcard
 
-The recipient opens the shared link without needing to install an app, create an account, connect a wallet, or own an NFT. A digital envelope introduces the delivery experience before revealing the visual content, personal message, and any optional music or gift voucher image.
+The recipient opens the shared link without needing to install an app, create an account, connect a wallet, or own an NFT. A digital envelope introduces the delivery experience before revealing the visual content, personal message, and any optional music, voice message, or gift voucher image.
 
 ### Postcard access and pricing model
 

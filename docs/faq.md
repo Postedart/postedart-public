@@ -10,7 +10,7 @@ It is a hosted digital composition that includes:
 
 - visual content (image or video)
 - a personal message
-- an optional short music clip
+- optional audio, such as a short music clip or voice message
 - an optional gift voucher image
 
 The recipient opens a digital envelope before the Postcard is revealed. Postcards are designed for mobile viewing and sharing.
@@ -48,7 +48,7 @@ They can:
 
 - view the visual content
 - read the message
-- play the optional music
+- play the optional audio
 - access the optional gift
 
 No wallet or account is required to view a Postcard.
@@ -281,16 +281,16 @@ Video files must be uploaded in **MP4, MOV, or WebM** format.
 
 Videos are converted for mobile viewing with square-to-portrait framing only. Landscape videos are center-cropped to square, portrait videos keep their aspect ratio up to 9:16, and videos taller than 9:16 are center-cropped to 9:16. Smaller videos are not upscaled. Converted videos have an approximate maximum file size of **2.75 MB**.
 
-#### Music
+#### Music and voice messages
 
 Music files must be uploaded in **MP3 or WAV** format.
 
 - Maximum upload size: **20 MB**
 - Maximum duration: **10 minutes**
 - Automatically converted to: **mono WAV postcard clip**
-- Maximum duration after conversion: **10 seconds**
+- Maximum duration after conversion: **30 seconds**
 
-Music is converted and optimized for consistent mobile playback with an approximate maximum file size of **500 KB**.
+The Android and iOS apps also allow users to record an optional voice message of up to **30 seconds**. Microphone access is requested only when the user starts this feature. Music and voice messages are converted on the device to the same mono, 22.05 kHz, 16-bit WAV format, with an approximate maximum file size of **1.4 MB** for a 30-second clip.
 
 #### Gift voucher
 

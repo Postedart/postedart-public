@@ -1,6 +1,6 @@
 # Terms of Service
 
-Effective date: June 1, 2026
+Effective date: August 25, 2026
 
 These Terms of Service (the "Terms") govern access to and use of the Posted.art platform, including the website, web application, mobile-first application experience, hosted Postcard pages, smart-contract-enabled ownership flows, and related services, features, content, and functionality that link to or reference these Terms (collectively, the "Platform").
 
@@ -31,11 +31,11 @@ Posted.art separates content usage, content creation, and content ownership. Usi
 
 "Art Certificate" means an NFT representing ownership of a supported item from the Platform's content library, subject to the scope and limitations described in these Terms.
 
-"Content" means visual, audio, textual, compositional, metadata, and other materials made available on or through the Platform, including images, videos, music clips, messages, gift-related media, and Creator-submitted materials.
+"Content" means visual, audio, textual, compositional, metadata, and other materials made available on or through the Platform, including images, videos, music clips, voice messages, written messages, gift-related media, and Creator-submitted materials.
 
 "Creator" means a user or Posted.art that submits, provides, or makes Content available through the Platform.
 
-"Postcard" means a hosted digital composition created through the Platform that combines Content with a message and optional music or gift-related elements.
+"Postcard" means a hosted digital composition created through the Platform that combines Content with a written message and optional audio or gift-related elements.
 
 "Services" means the Postcards, Create & Earn, and Art Certificates services, together with any related Platform features.
 

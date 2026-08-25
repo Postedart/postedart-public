@@ -154,7 +154,7 @@ It allows the user to create the message layer that will be combined with visual
 - **Text Editor** → edit message text and styling  
 - **Stickers** → open sticker panel  
 - **Background Color** → cycle color options  
-- **Music** → upload a supported audio file and select a short clip
+- **Music** → upload a supported audio file and select a short clip or, in the Android and iOS apps, record a voice message of up to 30 seconds
 - **Gift** → upload optional image of a gift voucher
 
 ### Purpose
@@ -177,14 +177,14 @@ The Share page is the final review and confirmation step of the **Postcards** fl
 It displays the complete Postcard composition:
 - visual content from the shared library  
 - rendered message  
-- optional short music clip
+- optional audio, such as a short music clip or voice message
 - optional gift voucher image
 
 ### Main actions
 
 - **Back** → return to `/write`  
 - **Send / Share** → open Postcard confirmation flow  
-- **Music** → preview the attached music clip
+- **Music** → preview the attached audio
 - **Gift** → preview, add or edit the gift voucher image
 
 The confirmation flow can include:
@@ -266,7 +266,7 @@ Recipients can view the Postcard without:
 
 ### Delivery experience
 
-The recipient first sees a digital envelope against a sky that changes with the time of day. Opening the envelope reveals the visual content and the personal message, together with any optional music or gift voucher image.
+The recipient first sees a digital envelope against a sky that changes with the time of day. Opening the envelope reveals the visual content and the personal message, together with any optional music, voice message, or gift voucher image.
 
 ### Displays
 
@@ -275,7 +275,7 @@ The recipient first sees a digital envelope against a sky that changes with the 
 - sender wallet identity or platform-supported sender identity  
 - availability state  
 - optional gift voucher image
-- optional short music clip
+- optional audio, such as a short music clip or voice message
 
 ### Identity model
 
@@ -292,7 +292,7 @@ If the Postcard is no longer accessible, the page switches to an expired state.
 ### Actions
 
 - **Download card** → download rendered message card  
-- **Play / pause music** → control music playback
+- **Play / pause audio** → control audio playback
 - **View gift** → preview and download the gift voucher image
 
 This page represents the final delivery experience of the Postcards product.

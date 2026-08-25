@@ -2,7 +2,7 @@
 
 Posted.art starts with a simple question: can a digital Postcard feel as personal as opening real post?
 
-People choose an image or video, write a message for one person and can optionally add a short music clip or gift voucher image. The recipient opens a digital envelope made for the moment.
+People choose an image or video, write a message for one person and can optionally add a short music clip, voice message, or gift voucher image. The recipient opens a digital envelope made for the moment.
 
 Beyond that personal exchange, Posted.art gives digital creators a way to contribute original work and gives collectors an optional way to own selected work through Art Certificates.
 

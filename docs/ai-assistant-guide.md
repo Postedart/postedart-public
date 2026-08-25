@@ -37,7 +37,7 @@ Canonical public surfaces:
 
 ## Core platform definition
 
-Posted.art helps people send personal digital Postcards that feel closer to opening real post than receiving another link. People choose an image or video, write a message for one person, and can optionally add a short music clip or gift voucher image. The recipient opens a digital envelope made for the moment.
+Posted.art helps people send personal digital Postcards that feel closer to opening real post than receiving another link. People choose an image or video, write a message for one person, and can optionally add a short music clip, voice message, or gift voucher image. The recipient opens a digital envelope made for the moment.
 
 Beyond Postcards, digital creators can submit original work for review and collectors can optionally own selected work through Art Certificates. The platform operates around three connected product layers:
 

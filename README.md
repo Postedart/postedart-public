@@ -1,6 +1,6 @@
 # Posted.art Public
 
-Posted.art helps people send personal digital Postcards that feel closer to opening real post than receiving another link. People choose an image or short video, write a message for one person, and can optionally add a short music clip or gift voucher image. The recipient opens a digital envelope made for the moment.
+Posted.art helps people send personal digital Postcards that feel closer to opening real post than receiving another link. People choose an image or short video, write a message for one person, and can optionally add a short music clip, voice message, or gift voucher image. The recipient opens a digital envelope made for the moment.
 
 Beyond Postcards, Posted.art supports creator participation and optional ownership through three connected products:
 
@@ -108,12 +108,12 @@ The same content library supports three distinct product interactions:
 
 ### 1. Postcards
 
-People can choose an image or short video, write a personal message, and optionally add a short music clip or gift voucher image.
+People can choose an image or short video, write a personal message, and optionally add a short music clip, voice message, or gift voucher image.
 
 A Postcard can include:
 - visual content (image or short video)
 - a personal message
-- an optional short music clip
+- optional audio, such as a short music clip or voice message
 - an optional gift voucher image
 
 The recipient opens a digital envelope before the Postcard is revealed. No app, account, wallet, or NFT ownership is required to receive and view it.
