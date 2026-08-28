@@ -35,7 +35,7 @@ The canonical public identity graph is maintained on the official domain and sho
 Official public surfaces include:
 
 - Web app: https://app.posted.art/explore
-- Apple App Store: https://apps.apple.com/nl/app/posted-art/id6783222298
+- Apple App Store: https://apps.apple.com/app/posted-art/id6783222298
 - Google Play: https://play.google.com/store/apps/details?id=art.posted.android
 - Telegram Mini App: https://t.me/postedart_bot/postedart
 - Farcaster Mini App: https://farcaster.xyz/miniapps/kp_oJ_b8QVNU/postedart
