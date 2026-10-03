@@ -218,9 +218,9 @@ These revenue rules are enforced by smart contract logic, subject to the behavio
 Art Certificate supply is determined at creation time by the creator or platform.
 
 - Some Art Certificates are **unlimited editions**
-- Some Art Certificates have a **fixed maximum supply**
+- Some Art Certificates have a **configured maximum supply**
 
-Once defined, supply caps cannot be changed for the related Art Certificate.
+The collection contract enforces the configured cap during minting. Its administrator can update that cap, provided it is not below the current total supply; it is not immutable at the contract level. See the [contract documentation](contracts.md) for details.
 
 ### Can Postcards be reshared?
 
@@ -355,6 +355,12 @@ Fiat values are used for presentation only.
 You can contact Posted.art at:
 
 hello@posted.art
+
+### How can I report a bug or suggest a feature?
+
+Search the [public issue tracker](https://github.com/Postedart/postedart-public/issues), then use [New issue](https://github.com/Postedart/postedart-public/issues/new/choose) to select the bug report or feature request form. It covers the web, iOS, Android, and Mini App experiences, the website, and public documentation. A GitHub account is required to submit a report.
+
+Reports and attachments are public. Keep account, payment, privacy, and security matters in the existing private support channel. Do not share credentials, personal Postcard links, gift voucher codes, or other sensitive information in an issue.
 
 ### Which networks are supported?
 

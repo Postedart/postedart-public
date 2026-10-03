@@ -1,0 +1,80 @@
+name: Report a bug
+description: Report a problem with a Posted.art app, the website, or public documentation.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues before submitting a new report.
+        This report and its attachments will be public. For account, payment, privacy, or security matters, use the private support option in the issue chooser.
+        Do not include credentials, wallet recovery phrases, access tokens, personal Postcard links, gift voucher codes, or unredacted receipts.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where did the problem happen?
+      options:
+        - Web app
+        - iOS app
+        - Android app
+        - Telegram Mini App
+        - Farcaster Mini App
+        - LINE app
+        - Website
+        - Public documentation
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Enter the app version if available, or write "Not sure" or "Not applicable".
+      placeholder: "For example: 1.2.3"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device, operating system, and browser
+      description: Include the relevant device and software versions if you know them.
+      placeholder: "For example: iPhone 15, iOS 18; or Windows 11, Chrome 140"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Explain how to reach the problem without sharing personal links or account details.
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. The problem happens when...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include any visible error message after removing sensitive details.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or additional context
+      description: Optional. Paste or drag screenshots into this field. Remove personal information and gift voucher details first.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public report
+      options:
+        - label: I understand this report is public and have removed sensitive information from the text and attachments.
+          required: true

@@ -1,0 +1,54 @@
+name: Suggest a feature
+description: Suggest an improvement to Posted.art.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues before suggesting a feature.
+        This request and its attachments will be public. For account, payment, privacy, or security matters, use the private support option in the issue chooser.
+        Do not include credentials, wallet recovery phrases, access tokens, personal Postcard links, gift voucher codes, or unredacted receipts.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where would this improvement help?
+      multiple: true
+      options:
+        - Web app
+        - iOS app
+        - Android app
+        - Telegram Mini App
+        - Farcaster Mini App
+        - LINE app
+        - Website
+        - Public documentation
+        - All platforms / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to do?
+      description: Describe the need or difficulty this feature would address.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: Explain how you would like Posted.art to work and who would benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Alternatives or additional context
+      description: Optional. Include alternatives you have considered or screenshots with personal information removed.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public request
+      options:
+        - label: I understand this request is public and have removed sensitive information from the text and attachments.
+          required: true

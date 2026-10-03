@@ -95,7 +95,7 @@ Create & Earn is separate from standard consumer postcard usage.
 
 Create & Earn introduces a direct creator revenue model aligned with ownership outcomes rather than advertising-based attention models.
 
-Create & Earn is part of the web/EVM product layer. It is not part of Postcard-only app experiences such as Android, Telegram, or Solana network flows.
+Create & Earn is part of the web/EVM product layer. It is not part of Postcard-only app experiences such as Android, iOS, Telegram, or Solana network flows.
 
 ---
 

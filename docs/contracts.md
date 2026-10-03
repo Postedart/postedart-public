@@ -14,7 +14,7 @@ The contract architecture separates:
 Posted.art uses three contract types:
 
 - ERC‑1155 contract for Art Certificates (edition‑based NFTs)  
-- ERC‑721 contract for unique or one‑of‑one NFTs  
+- ERC‑721 personal postcard NFT reference, separate from standard hosted Postcards
 - Shop contract for primary Art Certificate sales execution  
 
 These contracts together support the product model defined in the platform documentation.
@@ -32,7 +32,7 @@ This contract supports:
 - creator royalty participation  
 - transfer and burn functionality  
 
-Edition supply limits are defined at the time of first mint and cannot be changed afterwards.
+The Shop can initialize an edition cap from a signed purchase quote. The collection enforces the configured cap during minting, but its administrator can update the cap through `setMaxSupply`, provided it is not below the current total supply. Caps are therefore not immutable at the contract level.
 
 This enables Posted.art to support:
 - open editions  
@@ -45,16 +45,11 @@ Ownership is optional and separate from Postcards usage.
 
 ---
 
-## ERC‑721 (unique NFTs)
+## ERC‑721 reference (personal postcard NFTs)
 
-The ERC‑721 contract supports unique or one‑of‑one NFTs.
+`PostedArt721.sol` is a reference for individually minted personal postcard NFTs. It supports role-restricted minting, token metadata, and owner or approved-operator burning, with no pricing or royalty logic.
 
-This contract is designed for:
-- unique digital works  
-- future curated or premium releases  
-- potential real‑world‑asset‑linked digital representations  
-
-ERC‑721 ownership is not required for normal Postcards usage.
+Standard hosted Postcards are not ERC‑721 minting transactions. This reference should not be interpreted as an NFT ownership requirement for sending or receiving a Postcard.
 
 ---
 
@@ -68,9 +63,9 @@ It is responsible for:
 - splitting revenue between creator and platform  
 - minting Art Certificates via the ERC‑1155 contract  
 
-The creator revenue share for primary Art Certificate sales is fixed at 90%.
+Posted.art's primary Art Certificate sale model gives 90% of the sale price to the creator and 10% to the platform.
 
-This revenue split is enforced by immutable contract logic and cannot be changed after deployment.
+The Shop's split is set through `primaryFeeBps` at deployment and is immutable afterwards. The Solidity source accepts a deployment parameter; it does not hardcode a 90% split for every possible deployment.
 
 Pricing logic is not stored directly on-chain.
 
@@ -85,7 +80,7 @@ This architecture reduces on‑chain complexity while preserving verifiable on�
 
 ## Economic invariants
 
-Posted.art enforces key economic rules directly through immutable smart contract logic.
+The contracts distinguish fixed deployment settings from administrator-controlled collection state.
 
 Primary Art Certificate sales:
 - creators receive 90% of the sale price  
@@ -94,16 +89,18 @@ Primary Art Certificate sales:
 This revenue split is fixed at contract deployment and cannot be changed.
 
 Secondary Art Certificate transfers and secondary sales:
-- the ERC‑1155 contract enforces a default royalty of 3%  
+- the ERC‑1155 contract reports a default royalty of 3%
 - royalties are implemented through ERC‑2981  
+
+ERC‑2981 reports royalty information. Payment of secondary royalties depends on the marketplace or protocol; token transfers do not automatically collect them.
 
 Edition supply:
 - tokens may define a fixed maximum supply  
 - tokens may remain unlimited if no supply cap is set  
 
-Supply caps are immutable after initial definition.
+The collection enforces the current supply cap during minting. Administrators can change that cap, so it must not be described as immutable after initial definition.
 
-These invariants ensure predictable economic behavior for creators, collectors, and the platform.
+Current deployment settings and administrator permissions should be checked when assessing a specific Art Certificate.
 
 ---
 
@@ -114,7 +111,7 @@ A core design principle of Posted.art is the separation of:
 - content usage (Postcards)  
 - content ownership (Art Certificates)
 
-Smart contracts are used only within the ownership lifecycle, including minting, ownership tracking, primary‑sale execution, and on‑chain royalty enforcement. Postcards usage does not require NFT ownership or smart contract interaction.
+The ownership contracts support minting, ownership tracking, primary-sale execution, and royalty information. Postcard usage does not require NFT ownership or interaction with these ownership contracts.
 
 Users can create and send Postcards without acquiring ownership and without interacting with ownership smart contracts.
 

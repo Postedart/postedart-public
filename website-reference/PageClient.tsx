@@ -2,36 +2,52 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
-import { type SupportedLang } from "@/lib/languageCodes";
+import Footer from "@/components/Footer";
+import type { SupportedLang } from "@/lib/languageCodes";
 import type { Region } from "@/lib/countryCodes";
-import stories from "@/lib/stories";
-import usecases from "@/lib/usecases";
-import { FaApple, FaGithub, FaGoogle, FaInstagram, FaTelegram } from "react-icons/fa6";
-import { SiFarcaster } from "react-icons/si";
+import type { LatestPublishedNewsItem } from "@/lib/server/newsC1";
+import founder from "@/lib/translations/founder";
+import news from "@/lib/translations/news";
+import stories from "@/lib/translations/stories";
+import usecases from "@/lib/translations/usecases";
 
-const GOOGLE_PLAY_URL =
-  "https://play.google.com/store/apps/details?id=art.posted.android";
-const TELEGRAM_URL = "https://t.me/postedart_bot/postedart";
-const FARCASTER_URL =
-  "https://farcaster.xyz/miniapps/kp_oJ_b8QVNU/postedart";
-const INSTAGRAM_URL = "https://www.instagram.com/posteddotart/";
-const GITHUB_URL = "https://github.com/Postedart/postedart-public";
+const EXPLORE_URL = "https://app.posted.art/explore";
 
-const footerIconLinkClass =
-  "inline-flex h-10 w-10 items-center justify-center rounded-full text-2xl text-white/90 transition hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60";
+function renderUseCaseTitle(title: string) {
+  const [chapter, ...rest] = title.split(" — ");
+  const remainder = rest.join(" — ");
 
-const disabledFooterIconClass =
-  "inline-flex h-10 w-10 cursor-default items-center justify-center rounded-full text-2xl text-white/45";
+  return `${chapter}${remainder ? ` — ${remainder}` : ""}`;
+}
 
-export default function PageClient({ region, lang }: { region: Region; lang: SupportedLang }) {
+type PageClientProps = {
+  region: Region;
+  lang: SupportedLang;
+  latestNews: LatestPublishedNewsItem | null;
+};
+
+export default function PageClient({ region, lang, latestNews }: PageClientProps) {
   const isRTL = lang === "ar";
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div
+      id="top"
+      className="min-h-screen bg-black text-white flex flex-col"
+      lang={lang}
+    >
       <Header />
-      <StoriesSection region={region} lang={lang} isRTL={isRTL} />
-      <UseCasesSection region={region} lang={lang} isRTL={isRTL} />
+      <StoriesSection
+        region={region}
+        lang={lang}
+        isRTL={isRTL}
+      />
+      <UseCasesSection
+        lang={lang}
+        isRTL={isRTL}
+        latestNews={latestNews}
+      />
     </div>
   );
 }
@@ -44,25 +60,60 @@ interface StoriesSectionProps {
 
 const themes = ["birthday", "love", "getwell"] as const;
 
-function StoriesSection({ region, lang, isRTL }: StoriesSectionProps) {
+function StoriesSection({
+  region,
+  lang,
+  isRTL,
+}: StoriesSectionProps) {
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [readyRegionCode, setReadyRegionCode] = useState<string | null>(null);
 
   const t = stories[lang];
 
   const regionCode = region.toLowerCase();
+  const storyImageSources = themes.map((storyTheme) => `/stories/${storyTheme}_${regionCode}.webp`);
+  const isReady = readyRegionCode === regionCode;
   const theme = themes[index];
   const story = t.stories.find((s) => s.key === theme);
   const { title, text } = story ?? { title: "", text: "" };
   const imageSrc = `/stories/${theme}_${regionCode}.webp`;
 
   useEffect(() => {
-    if (isPaused) return;
+    let cancelled = false;
+
+    const preloadImages = async () => {
+      await Promise.all(
+        storyImageSources.map(
+          (src) =>
+            new Promise<void>((resolve) => {
+              const image = new window.Image();
+              image.onload = () => resolve();
+              image.onerror = () => resolve();
+              image.src = src;
+            }),
+        ),
+      );
+
+      if (!cancelled) {
+        setReadyRegionCode(regionCode);
+      }
+    };
+
+    void preloadImages();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [regionCode, storyImageSources]);
+
+  useEffect(() => {
+    if (isPaused || !isReady) return;
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % themes.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [isPaused]);
+  }, [isPaused, isReady]);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -88,7 +139,18 @@ function StoriesSection({ region, lang, isRTL }: StoriesSectionProps) {
         onPointerUp={() => setIsPaused(false)}
         onPointerLeave={() => setIsPaused(false)}
       />
-      <Image src={imageSrc} alt={`${theme} story`} fill className="object-cover object-center transition-opacity duration-700 ease-in-out" priority />
+      {isReady ? (
+        <Image
+          key={imageSrc}
+          src={imageSrc}
+          alt={`${theme} story`}
+          fill
+          loading="eager"
+          className="object-cover object-center transition-opacity duration-700 ease-in-out"
+        />
+      ) : (
+        <div className="absolute inset-0 bg-black" aria-hidden />
+      )}
       {isPaused && (
         <div className="absolute top-4 right-4 z-40 text-white text-2xl opacity-70" aria-label="Slideshow paused">
           ❚❚
@@ -112,45 +174,22 @@ function StoriesSection({ region, lang, isRTL }: StoriesSectionProps) {
 }
 
 interface UseCasesSectionProps {
-  region: Region;
   lang: SupportedLang;
   isRTL: boolean;
+  latestNews: LatestPublishedNewsItem | null;
 }
 
-function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
+function UseCasesSection({
+  lang,
+  isRTL,
+  latestNews,
+}: UseCasesSectionProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
   const t = usecases[lang];
-
-  function assertNever(x: never): never {
-    throw new Error(`Unhandled region: ${String(x)}`)
-  }
-
-  function shareVideoForRegion(r: Region): string {
-    switch (r) {
-      case "CEE":
-      case "EU":
-        return "/usecases/usecase_share_EUR.mp4"
-      case "IND":
-        return "/usecases/usecase_share_INR.mp4"
-      case "CHI":
-        return "/usecases/usecase_share_CNY.mp4"
-      case "ANZ":
-        return "/usecases/usecase_share_AUD.mp4"
-      case "JPKR":
-        return "/usecases/usecase_share_SGD.mp4"
-      case "LATAM":
-      case "AFR":
-      case "ME":
-      case "NA":
-        return "/usecases/usecase_share_USD.mp4"
-      default:
-        return assertNever(r)
-    }
-  }
-
-  const shareVideoSrc = shareVideoForRegion(region)
+  const newsTranslation = news[lang];
+  const founderTranslation = founder[lang];
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -185,21 +224,21 @@ function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
               dir={isRTL ? "rtl" : "ltr"}
             >
               <h3 className="text-3xl lg:text-5xl font-semibold mb-4">
-                {t.usecases[0].title}
+                {renderUseCaseTitle(t.usecases[0].title)}
               </h3>
               <p className="text-xl lg:text-2xl leading-loose max-w-xl mx-auto lg:mx-0 mb-6">
                 {t.usecases[0].text}
               </p>
-              <button
+              <a
+                href={EXPLORE_URL}
                 className="text-xl lg:text-2xl border border-white rounded-full px-8 lg:px-10 py-2 lg:py-2.5 hover:bg-white hover:text-black transition"
-                onClick={() => window.location.href = 'https://app.posted.art/explore'}
               >
                 Get Posted
-              </button>
+              </a>
             </div>
            </div>
           <div className="w-full lg:w-1/2">
-            <Image src="/usecases/usecase_explore_black.webp" alt="Explore" width={800} height={600} className="w-full h-auto rounded-lg" />
+            <Image src="/usecases/usecase_explore.webp" alt="Explore" width={1254} height={1254} className="w-full h-auto rounded-lg" />
           </div>
         </div>
       </div>
@@ -213,21 +252,21 @@ function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
               dir={isRTL ? "rtl" : "ltr"}
             >
               <h3 className="text-3xl lg:text-5xl font-semibold mb-4">
-                {t.usecases[1].title}
+                {renderUseCaseTitle(t.usecases[1].title)}
               </h3>
               <p className="text-xl lg:text-2xl leading-loose max-w-xl mx-auto lg:mx-0 mb-6">
                 {t.usecases[1].text}
               </p>
-              <button
+              <a
+                href={EXPLORE_URL}
                 className="text-xl lg:text-2xl border border-black rounded-full px-8 lg:px-10 py-2 lg:py-2.5 hover:bg-black hover:text-white transition"
-                onClick={() => window.location.href = 'https://app.posted.art/explore'}
               >
                 Get Posted
-              </button>
+              </a>
             </div>
            </div>
           <div className="w-full lg:w-1/2">
-            <Image src="/usecases/usecase_write_white.webp" alt="Write" width={800} height={600} className="w-full h-auto rounded-lg" />
+            <Image src="/usecases/usecase_write.webp" alt="Write" width={1254} height={1254} className="w-full h-auto rounded-lg" />
           </div>
         </div>
       </div>
@@ -241,26 +280,26 @@ function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
               dir={isRTL ? "rtl" : "ltr"}
             >
               <h3 className="text-3xl lg:text-5xl font-semibold mb-4">
-                {t.usecases[2].title}
+                {renderUseCaseTitle(t.usecases[2].title)}
               </h3>
               <p className="text-xl lg:text-2xl leading-loose max-w-xl mx-auto lg:mx-0 mb-6">
                 {t.usecases[2].text}
               </p>
-              <button
+              <a
+                href={EXPLORE_URL}
                 className="text-xl lg:text-2xl border border-black rounded-full px-8 lg:px-10 py-2 lg:py-2.5 hover:bg-black hover:text-white transition"
-                onClick={() => window.location.href = 'https://app.posted.art/explore'}
               >
                 Get Posted
-              </button>
+              </a>
             </div>
            </div>
           <div className="w-full lg:w-1/2">
-            <Image src="/usecases/usecase_gift_white.webp" alt="Gift" width={800} height={600} className="w-full h-auto rounded-lg" />
+            <Image src="/usecases/usecase_gift.webp" alt="Gift" width={1254} height={1254} className="w-full h-auto rounded-lg" />
           </div>
         </div>
       </div>
 
-      {/* Use Case 4 – Share */}
+      {/* Use Case 4 – Earn */}
       <div className="bg-black text-white py-24 lg:py-32">
         <div className="mx-auto px-4 lg:px-12 text-center lg:text-left flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-10">
           <div className="w-full lg:w-1/2">
@@ -269,17 +308,17 @@ function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
               dir={isRTL ? "rtl" : "ltr"}
             >
               <h3 className="text-3xl lg:text-5xl font-semibold mb-4">
-                {t.usecases[3].title}
+                {renderUseCaseTitle(t.usecases[4].title)}
               </h3>
               <p className="text-xl lg:text-2xl leading-loose max-w-xl mx-auto lg:mx-0 mb-6">
-                {t.usecases[3].text}
+                {t.usecases[4].text}
               </p>
-              <button
+              <a
+                href={EXPLORE_URL}
                 className="text-xl lg:text-2xl border border-white rounded-full px-8 lg:px-10 py-2 lg:py-2.5 hover:bg-white hover:text-black transition"
-                onClick={() => window.location.href = 'https://app.posted.art/explore'}
               >
                 Get Posted
-              </button>
+              </a>
             </div>
            </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
@@ -295,15 +334,17 @@ function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
                 onPointerUp={() => setIsPaused(false)}
                 onPointerLeave={() => setIsPaused(false)}
               />
-              <video
-                ref={videoRef}
-                muted
-                loop
-                playsInline
-                className="w-full rounded-lg shadow-lg"
-              >
-                <source src={shareVideoSrc} type="video/mp4" />
-              </video>
+              <div className="overflow-hidden rounded-lg shadow-lg aspect-[9/15.5]">
+                <video
+                  ref={videoRef}
+                  muted
+                  loop
+                  playsInline
+                  className="h-full w-full object-cover"
+                >
+                  <source src="/usecases/usecase_earn.mp4" type="video/mp4" />
+                </video>
+              </div>
               {isPaused && (
                 <div
                   className="absolute top-4 right-10 z-40 text-white text-2xl opacity-70"
@@ -315,88 +356,49 @@ function UseCasesSection({ region, lang, isRTL }: UseCasesSectionProps) {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Use Case 5 – Earn */}
-      <div className="bg-black text-white py-24 lg:py-32">
-        <div className="mx-auto px-4 lg:px-12 text-center lg:text-left flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
-          <div className="w-full lg:w-1/2">
-            <div
-              className={`${isRTL ? "text-right" : "text-center lg:text-left"}`}
-              dir={isRTL ? "rtl" : "ltr"}
-            >
-              <h3 className="text-3xl lg:text-5xl font-semibold mb-4">
-                {t.usecases[4].title}
-              </h3>
-              <p className="text-xl lg:text-2xl leading-loose max-w-xl mx-auto lg:mx-0 mb-6">
-                {t.usecases[4].text}
-              </p>
-              <button
-                className="text-xl lg:text-2xl border border-white rounded-full px-8 lg:px-10 py-2 lg:py-2.5 hover:bg-white hover:text-black transition"
-                onClick={() => window.location.href = 'https://app.posted.art/explore'}
-              >
-                Get Posted
-              </button>
-            </div>
-           </div>
-          <div className="w-full lg:w-1/2">
-            <Image src="/usecases/usecase_xpposted_black.webp" alt="xpPOSTED" width={800} height={600} className="w-full h-auto rounded-lg" />
-          </div>
-        </div>
-      </div>
-
-      {/* About Section */}
-      <div className="bg-black text-white py-24 px-4">
-        <div className="mx-auto px-4 lg:px-12 text-center lg:text-left">
-          <div className="mb-6">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top" className="focus:outline-none cursor-pointer">
-              <img src="/logos/postedart_logo_bg-black_wide.svg" alt="Posted.art logo" className="mx-auto lg:mx-0 lg:-ml-8 w-full max-w-[300px] h-auto" />
-            </button>
-          </div>
-          <p className="text-xl lg:text-2xl leading-loose mb-4">
-            {t.tagline}
+        <div
+          id="latest-news"
+          className={`mx-auto mt-16 w-full max-w-[480px] scroll-mt-24 px-6 lg:max-w-none lg:px-12 ${isRTL ? "text-right" : "text-center lg:text-left"}`}
+          dir={isRTL ? "rtl" : "ltr"}
+        >
+          <p
+            className={`${latestNews ? "mb-3" : "mb-6"} text-sm font-semibold uppercase tracking-[0.16em] text-white/55`}
+          >
+            {newsTranslation.latestNewsLabel}
           </p>
-          <p className="text-xl lg:text-2xl mb-4">
-          <a href="mailto:hello@posted.art" className="underline">hello@posted.art</a>
+          {latestNews && (
+            <h3 className="mx-auto mb-6 max-w-sm text-2xl font-semibold leading-snug text-white lg:mx-0 lg:text-3xl">
+              {latestNews.title}
+            </h3>
+          )}
+          <Link
+            href="/news"
+            className="inline-flex rounded-full border border-white px-6 py-1.5 text-base text-white transition hover:bg-white hover:text-black lg:px-7 lg:py-2 lg:text-lg"
+          >
+            Read News
+          </Link>
+        </div>
+        <div
+          id="founder-message"
+          className={`mx-auto mt-16 w-full max-w-[480px] scroll-mt-24 px-6 lg:max-w-none lg:px-12 ${isRTL ? "text-right" : "text-center lg:text-left"}`}
+          dir={isRTL ? "rtl" : "ltr"}
+        >
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-white/55">
+            {founderTranslation.eyebrow}
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-white lg:justify-start">
-            <span className={disabledFooterIconClass} aria-label="App Store">
-              <FaApple />
-            </span>
-            <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer" aria-label="Google Play" className={footerIconLinkClass}><FaGoogle /></a>
-            <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Telegram" className={footerIconLinkClass}><FaTelegram /></a>
-            <a href={FARCASTER_URL} target="_blank" rel="noopener noreferrer" aria-label="Farcaster" className={footerIconLinkClass}><SiFarcaster /></a>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={footerIconLinkClass}><FaInstagram /></a>
-            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className={footerIconLinkClass}><FaGithub /></a>
-          </div>
+          <h3 className="mx-auto mb-6 max-w-sm text-2xl font-semibold leading-snug text-white lg:mx-0 lg:text-3xl">
+            {founderTranslation.title}
+          </h3>
+          <Link
+            href={lang === "en" ? "/founder" : `/founder?language=${lang}`}
+            className="inline-flex rounded-full border border-white px-6 py-1.5 text-base text-white transition hover:bg-white hover:text-black lg:px-7 lg:py-2 lg:text-lg"
+          >
+            Read the Message
+          </Link>
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-black text-white px-6 py-6 text-sm">
-        <div className="border-t border-gray-800 pt-6 w-full px-4 lg:px-2 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400">© 2025 Posted.art. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a
-              href="https://github.com/Postedart/postedart-public/blob/main/docs/terms-of-service.md"
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-400 underline decoration-gray-500 underline-offset-4 hover:text-white transition"
-            >
-              Terms of Service
-            </a>
-            <a
-              href="https://github.com/Postedart/postedart-public/blob/main/docs/privacy-policy.md"
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-400 underline decoration-gray-500 underline-offset-4 hover:text-white transition"
-            >
-              Privacy Policy
-            </a>
-          </div>
-        </div>
-      </footer>
-
+      <Footer tagline={t.tagline} />
     </section>
   );
 }

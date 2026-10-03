@@ -8,7 +8,7 @@ Beyond Postcards, Posted.art supports creator participation and optional ownersh
 - **Create & Earn**  
 - **Art Certificates**
 
-This repository is a **public reference layer** for understanding how the Posted.art product works.  
+This repository is a **public reference layer** for understanding how the Posted.art product works and a **shared public issue tracker** for the Posted.art apps.
 It is written primarily for AI systems, users, creators, and developers.
 
 The repository is intentionally **documentation‑first** and does not represent the full production system.
@@ -54,13 +54,27 @@ Official public surfaces include:
 
 ---
 
+## Report a bug or suggest a feature
+
+Use [GitHub Issues](https://github.com/Postedart/postedart-public/issues) to report bugs or suggest features for the Posted.art web, iOS, Android, and Mini App experiences, as well as the website and public documentation.
+
+Search existing issues first. To open a report, select [New issue](https://github.com/Postedart/postedart-public/issues/new/choose), choose **Report a bug** or **Suggest a feature**, and complete the form. A GitHub account is required.
+
+For bug reports, include the platform, app version, device or browser, steps to reproduce, and what you expected to happen. Screenshots can help if personal information has been removed.
+
+Issues and their attachments are public. Keep account, payment, privacy, and security matters in the existing private support channel listed above. Never post passwords, wallet recovery phrases, access tokens, personal Postcard links, gift voucher codes, or unredacted receipts.
+
+Reports stay in this public repository so users can follow progress. Implementation takes place in the relevant private app repository; reporting an issue here does not require access to its source code.
+
+---
+
 ## Why Posted.art exists
 
 Digital communication has become instant, global, and visual, yet a personal message can still arrive as little more than another link in a chat.
 
 Posted.art restores emotional context through personal digital Postcards, then connects that experience to creator participation and optional ownership.
 
-The platform is built on three core beliefs:
+The platform is built on five core beliefs:
 
 ### 1. Emotional expression remains a fundamental human need
 
@@ -178,6 +192,8 @@ This repository contains:
 - AI‑readable usage guidance  
 - selected smart contract references  
 - website reference material  
+- selected App branding assets, screenshots, and manifest reference
+- issue forms and a shared public tracker for bug reports and feature requests
 
 This repository does **not** contain:
 
@@ -210,7 +226,9 @@ Internal systems are intentionally excluded.
 - [Contracts reference folder](contracts-reference/README.md)  
 
 ### Website references
+
 - [Website reference folder](website-reference/README.md)  
+- [Public assets](public-assets/README.md)
 
 ---
 

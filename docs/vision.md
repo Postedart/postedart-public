@@ -44,7 +44,7 @@ Postcards are the broadest product layer across multiple platforms. The product 
 
 ### Create & Earn  
 A participation layer for creators to contribute visual content to the shared ecosystem.  
-Revenue participation is directly linked to asset usage and ownership outcomes rather than mediated through advertising attention models.
+Creator revenue participation comes from primary Art Certificate sales rather than advertising attention models. Using content in a Postcard does not itself create a creator payout.
 
 ### Art Certificates  
 An optional ownership layer that allows digital content to be collected.  
@@ -112,7 +112,7 @@ to establish visual digital objects as meaningful social instruments rather than
 ## Public resources
 
 Website: https://posted.art  
-Product documentation: https://github.com/Postedart  
+Product documentation: https://github.com/Postedart/postedart-public/tree/main/docs
 
 ---
 

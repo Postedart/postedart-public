@@ -22,7 +22,7 @@ They are a subset of the full internal contracts repository and are published to
 This reference layer focuses on:
 
 - ERC‑1155 collection logic (Art Certificates)
-- ERC‑721 personal postcard NFTs
+- ERC‑721 personal postcard NFT reference, separate from standard hosted Postcards
 - primary sale execution and mint authorization
 - minimal interface surface between contracts
 
@@ -53,6 +53,8 @@ Those dependencies are **not included in this repository**.
 
 To compile or test these contracts, developers should use the original contracts repository or install the appropriate OpenZeppelin packages in their own environment.
 
+The public snapshot keeps `IPostedArt1155.sol` at the folder root. The Solidity imports expect `interfaces/IPostedArt1155.sol`; recreate that path in a separate build workspace before compiling.
+
 ---
 
 ## Relationship to deployed contracts
@@ -61,17 +63,17 @@ The canonical deployed contracts live on public blockchains.
 
 Contract addresses per network are documented in:
 
-- `docs/faq.md`
+- [FAQ contract addresses](../docs/faq.md#what-are-the-smart-contract-addresses)
 
 This folder contains **reference implementations**, not deployment records.
 
-Deployed contracts are immutable once published on‑chain.
+These references use direct deployments rather than upgradeable proxies. Deployed bytecode is fixed, but authorized roles can still change the state exposed by the contracts, including collection supply caps, minter roles, pause state, and collection metadata.
 
 ---
 
 ## Versioning philosophy
 
-The contracts in this folder reflect the **current production logic** of the Posted.art ownership layer.
+The contracts in this folder are a source reference for the Posted.art ownership layer. They are not a substitute for verifying the deployed bytecode, constructor settings, roles, and current state on the relevant network.
 
 Historical deployments remain verifiable via blockchain explorers.
 
@@ -83,14 +85,14 @@ Future updates may introduce new contract versions without altering previously d
 
 The `IPostedArt1155.sol` file in this folder exposes the minimal public interface used for contract interaction.
 
-These interfaces are included to:
+This interface is included to:
 
 - clarify integration surfaces
 - improve audit readability
 - support third‑party development
 - assist AI interpretation of contract behavior
 
-They do not introduce additional logic or security surface.
+The interface declares callable functions without implementing their behavior.
 
 ---
 

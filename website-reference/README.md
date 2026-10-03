@@ -1,94 +1,29 @@
 # Posted.art Website Reference
 
-This folder contains a **reference snapshot** of the public Posted.art website structure.
+This folder contains a small source snapshot of the public website's homepage composition, synchronized from the website repository on 2026-10-03.
 
-It is not a standalone runnable project.  
-Its purpose is to provide architectural clarity and transparency for developers, AI systems, and reviewers who want to understand how the public-facing website is composed.
+It helps developers and reviewers understand the website's entry points, localization, storytelling, product sections, and public navigation. For product behavior and user guidance, start with the [main documentation](../README.md#documentation-index).
 
-## Scope of this reference
+## Included files
 
-This section intentionally includes only the minimal files required to explain:
+- `page.tsx`: the root homepage entry. Detects the preferred language, redirects non-English visitors to a localized homepage, derives regional context from request headers, builds English metadata, and requests the latest published news.
+- `LocalizedPage.tsx`: the source of `src/app/[language]/page.tsx`, renamed here for clarity. Validates the language route, builds localized metadata, derives regional context, and requests localized news. The English route redirects to `/`.
+- `PageClient.tsx`: composes the regional story slideshow, Explore, Write, Gift, and Earn sections, news and founder links, and shared footer.
+- `Header.tsx`: branding and the link to the App's Explore page.
+- `Footer.tsx`: shared branding, app-store and social links, and Docs, Terms, and Privacy navigation.
 
-- How the public website page is structured
-- How regional and language detection is performed
-- How the main UI composition is assembled
-- How product use cases and storytelling content are presented
+## Snapshot boundaries
 
-The reference does **not** include:
+This is not a standalone runnable project. Imports retain their original website paths, and the snapshot omits the Next.js project configuration, dependencies, styling setup, translations, media, metadata helpers, and backend implementations. Calls to the news service show where data enters the homepage; the service implementation and credentials are not included.
 
-- Full project configuration
-- Build tooling
-- Environment configuration
-- Styling system implementation
-- External dependencies
-- Internal application logic
-- Wallet logic
-- Payment flows
-- Backend integrations
+News article pages, the founder page, documentation pages, legal page rendering, and the recipient Postcard experience are also outside this small homepage snapshot.
 
-This keeps the public repository lightweight and focused on conceptual clarity rather than operational completeness.
+The website source remains the source of truth. These copies should be refreshed together when relevant homepage changes are made, with the synchronization date updated. This folder does not automatically track production.
 
-## Included components
+## Related references
 
-### `page.tsx`
+- [Product documentation](../README.md#documentation-index)
+- [Selected App assets](../public-assets/README.md), which are a separate asset set from the website's storytelling media
+- [Smart contract references](../contracts-reference/README.md)
 
-Server entry point responsible for:
-
-- Detecting user country via platform headers
-- Mapping country to regional context
-- Detecting preferred language
-- Passing contextual parameters into the client UI
-
-This reflects how the website dynamically adapts to global audiences.
-
-### `PageClient.tsx`
-
-Primary website composition layer.
-
-Responsible for:
-
-- Rendering product use cases
-- Presenting platform narrative
-- Managing global storytelling tone
-- Structuring user entry into the Posted.art ecosystem
-
-This component represents the **conceptual homepage architecture** rather than a production build artifact.
-
-### `Header.tsx`
-
-Top‑level navigation and branding container.
-
-Included for structural clarity and UI composition reference.
-
-## Why only partial code is shared
-
-Posted.art operates with a clear separation between:
-
-- Public communication layer (website)
-- Application layer (mobile‑first platform)
-- Smart contract layer (on‑chain assets)
-
-This repository exposes only the **communication layer reference**, ensuring:
-
-- Transparency of platform intent
-- AI‑readable architecture documentation
-- Conceptual reproducibility
-- Long‑term documentation stability
-
-## Relationship to other folders
-
-- `docs/` → conceptual documentation and platform explanation
-- `contracts-reference/` → smart contract transparency layer
-- `website-reference/` → public narrative and entry architecture
-
-Together, these form the **AI‑first public documentation layer** of Posted.art.
-
-## Important note
-
-This folder should be understood as:
-
-> A structural and narrative reference — not a deployable website.
-
-For live behavior, see:
-
-https://posted.art
+For the live website, see [posted.art](https://posted.art).

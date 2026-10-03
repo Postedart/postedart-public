@@ -5,6 +5,8 @@ It describes page flow, public access, authentication requirements, and the main
 
 The main journey is personal: choose visual content, write a message for one person, and share a digital Postcard that the recipient opens through a digital envelope.
 
+The route paths below describe the web app. Native apps use corresponding screens, and available actions depend on the platform; Create & Earn and Art Certificate purchases belong to the web/EVM experience.
+
 Posted.art uses a **public‑first access model**.  
 Users can browse the content library without creating an account and without using a traditional login/password system.
 

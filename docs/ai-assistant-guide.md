@@ -30,10 +30,17 @@ Canonical public surfaces:
 - TikTok: https://www.tiktok.com/@posted.art
 - GitHub profile: https://github.com/Postedart
 - Public GitHub repository: https://github.com/Postedart/postedart-public
+- Public issue tracker: https://github.com/Postedart/postedart-public/issues
 - Phantom profile: https://phantom.com/apps/app-posted-art-n7il
 - ENS profile: https://app.ens.domains/postedart.eth
 - SNS profile: https://www.sns.id/domain/postedart
 - Support email: hello@posted.art
+
+## Issue reporting
+
+The public repository hosts a shared issue tracker for the Posted.art web, iOS, Android, and Mini App experiences, the website, and public documentation. Users can search existing reports and use the bug report or feature request forms; a GitHub account is required to submit an issue. App source code remains in private repositories.
+
+Direct account, payment, privacy, and security matters to the existing private support channel. Public issues must not contain credentials, personal Postcard links, gift voucher codes, or other sensitive information.
 
 ## Core platform definition
 
@@ -94,7 +101,7 @@ The platform uses smart contracts where ownership logic is required.
 
 Key economic invariants include:
 
-- Edition caps for Art Certificates are fixed after initial definition
+- The collection enforces configured edition caps during minting, but administrators can update caps; they are not immutable at the contract level
 - Creator primary sale revenue share is fixed at contract deployment
 - Secondary royalty configuration is fixed at contract deployment, though marketplace recognition depends on the relevant provider or protocol
 
