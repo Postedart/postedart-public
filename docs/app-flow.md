@@ -5,6 +5,8 @@ It describes page flow, public access, authentication requirements, and the main
 
 The main journey is personal: choose visual content, write a message for one person, and share a digital Postcard that the recipient opens through a digital envelope.
 
+For detailed instructions and matching screenshots, see [Help Source](help-source/screenshot-guidance.md). The Help guides provide the current client-specific steps.
+
 The route paths below describe the web app. Native apps use corresponding screens, and available actions depend on the platform; Create & Earn and Art Certificate purchases belong to the web/EVM experience.
 
 Posted.art uses a **public‑first access model**.  
@@ -17,10 +19,9 @@ The app is structured around three product layers:
 
 ---
 
-## Explore page (`/explore`)
+## Home / Explore page (`/explore`)
 
-The Explore page is the main public entry point of the app.  
-It presents the shared content library as a mobile‑first grid of images and videos.
+Home is the main artwork-browsing surface, served at `/explore` in the web app. It presents a mobile-first grid of images and videos. Telegram instead starts on Account with automatic connection; users then select Home to browse.
 
 Users can browse content without connecting a wallet.
 
@@ -28,9 +29,9 @@ Users can browse content without connecting a wallet.
 
 - **Connect** → authenticate with the supported method for the active platform
 - **Content Grid** → browse and open individual content items  
-- **Create & Earn** → open the creator submission flow  
-- **Wallet / Postcards** → open the user's personal area  
-- **Search** → filter the content library  
+- **Create & Earn** → open the creator submission flow when a supported authenticated EVM connection enables the Upload control
+- **Account** → open the user's identity, Postcards and applicable wallet features
+- **Search** → filter the loaded Home selection; special views such as Favorites have their own retrieval behaviour
 
 ### Public‑first browsing
 
@@ -88,25 +89,20 @@ It presents the content library as a scrollable grid of images and videos.
 
 Selecting an item opens the `/card` page.
 
-The grid shows a rotating set of content items from the shared library.  
-Users can refresh the grid to load a new content set.
+Ordinary Home browsing loads a selection of up to 600 artworks. Refresh loads a new selection while keeping active filters applied; selections may overlap. Opening matching artwork on Card allows browsing its full series, beyond the current Home selection. See [Home, Search & Series](help-source/home-and-series.md).
 
 ### Create & Earn
 
-The Create & Earn action opens the creator submission flow.
+The heart-plus Upload control opens Create & Earn in the web/EVM flow. It is hidden in disconnected web sessions and unavailable in standalone iOS/Android apps, Telegram and Solana. Connect and authenticate a supported EVM wallet to access it; inside Farcaster, the active network determines availability. See [Create & Earn](help-source/create-and-earn.md).
 
-In web/EVM flows, if the user is not connected, wallet connection is required first.  
-If connected, the creator submission dialog can open.
+### Account
 
-### Wallet
-
-The Wallet or Postcards action opens the user's personal area.  
+The Account action opens the user's personal area.
 This is where public browsing transitions into authenticated usage.
 
 ### Search
 
-The Search action filters the content library.  
-Search works during public browsing and remains part of the Explore flow.
+Standard Search filters the loaded Home selection and works without authentication. Favorites, Limited Editions and creator results have their own retrieval behaviour. See [Home search](help-source/home-and-series.md#search-and-filter-the-current-selection).
 
 ---
 
@@ -126,7 +122,7 @@ It allows the user to:
 - **Like** → save to authenticated favorites  
 - **Share card** → open native share flow  
 - **Buy Art Certificate** → start NFT purchase flow where supported  
-- **Artist** → filter Explore to the same creator  
+- **Creator information** → filter Home to that creator in the web app; the iOS creator logo instead opens an Art Certificate explanation
 
 ### Purpose
 
@@ -139,8 +135,7 @@ Users decide whether to:
 
 ### Additional behavior
 
-The Card page supports vertical browsing between nearby content items.  
-This allows continued browsing without returning to Explore.
+Card can browse the full series independently of the current Home selection. Opening an owned Art Certificate through its plus action uses single-artwork mode instead. The NFT purchase icon is hidden in disconnected web sessions and unavailable in native apps, Telegram and Solana. See [Card: View Artwork](help-source/artwork-view.md).
 
 ---
 
@@ -152,12 +147,12 @@ It allows the user to create the message layer that will be combined with visual
 ### Main actions
 
 - **Back** → return to `/card` while preserving Postcard state  
-- **Save** → store composition and continue to `/share`  
+- **Continue to Share** → prepare the current composition for review at `/share`; this is not a durable draft-save action
 - **Text Editor** → edit message text and styling  
 - **Stickers** → open sticker panel  
 - **Background Color** → cycle color options  
-- **Music** → upload a supported audio file and select a short clip or, in the Android and iOS apps, record a voice message of up to 30 seconds
-- **Gift** → upload optional image of a gift voucher
+- **Music** → upload audio and select a short clip, or use the voice-recording option where available; see [Write & Personalize](help-source/write.md#record-a-voice-message)
+- **Gift** → attach an optional gift-voucher image or personal photo
 
 ### Purpose
 
@@ -168,7 +163,7 @@ Users define the final message experience delivered with visual content from the
 ### Composition model
 
 The page uses a live‑rendered canvas model.  
-All elements are combined into one Postcard composition finalized during the Share step.
+The canvas is rendered for review during the Share step. The current design is temporary working state, not a durable saved draft. Returning after more than one hour in the background resets working state; native scheduling stores prepared drafts separately. See [saving an unfinished Postcard](help-source/write.md#can-i-save-an-unfinished-postcard).
 
 ---
 
@@ -185,9 +180,9 @@ It displays the complete Postcard composition:
 ### Main actions
 
 - **Back** → return to `/write`  
-- **Send / Share** → open Postcard confirmation flow  
+- **Dollar sign / top-right chevron** → open the same personal Postcard confirmation or payment flow
 - **Music** → preview the attached audio
-- **Gift** → preview, add or edit the gift voucher image
+- **Gift** → review, add or replace the gift image before creation; the plus badge indicates no attachment
 
 The confirmation flow can include:
 
@@ -198,37 +193,44 @@ The confirmation flow can include:
 - check subscription state where applicable
 - check active Postcard fair-usage limits
 
-After confirmation:
+After successful creation:
 
-- **Share** → share the unique Postcard link  
-- **QR code** → open QR and direct link  
-- **Close** → end flow and return to Explore  
+- **Share** → open sharing options for the unique Postcard link; the user chooses a recipient and completes sending
+- **QR code** → reopen the QR and direct-link panel
+- **Gift** → view an attached gift read-only
+- **Close / top-right X** → clear the working design and return to Account
+
+Switching bottom-navigation tabs alone preserves the completed Share state. In the web flow, choosing artwork on Home clears that state while retaining the current canvas and attachments. See [starting another Postcard](help-source/share.md#start-another-postcard).
 
 ### Purpose
 
 The Share page confirms the final Postcard experience before sending, scheduling, payment, or sharing.
 
-After successful confirmation, the Postcard becomes an active shared item with its own public link.
+After successful creation, the Postcard has a public link. Scheduling instead saves a local draft and reminder; it does not immediately create the hosted item or send a message. Creating a Postcard and delivering its link are separate actions.
+
+Wallet flows prepare the Postcard before requesting payment. If payment succeeds but the connection is interrupted, reconnect the same wallet promptly and check Account within three days of the original attempt. See [payment recovery](help-source/share.md#payment-completed-but-the-connection-was-interrupted).
+
+The free offer depends on currently hosted Postcards for the connected account; see [eligibility](help-source/pricing.md#free-postcard). Current charges are maintained in [FAQ pricing](faq.md#how-much-does-it-cost).
 
 ### Scheduling behavior
 
-On supported mobile app flows, the user can schedule a Postcard instead of sending it immediately.
+Scheduling is available only in the standalone iOS and Android apps, not in web/PWA, Telegram, wallet browsers or Farcaster. It saves a draft and provides a reminder rather than automatic delivery.
 
 Scheduled Postcards:
 
 - are stored locally on the user's phone
-- can be scheduled between **1 hour** and **1 month** from now
+- can be scheduled between **1 hour** and **one calendar month** from now
 - trigger a local notification reminder
 - remain visible as drafts after the reminder until sent or deleted
 - are limited to **5 scheduled Postcards** at the same time
 
-When a scheduled Postcard is reopened, the user can send it now, choose a new notification time, add a gift voucher image, or delete it. The original Postcard composition is not edited from that recovery state.
+Account shows the future date/time, then Ready once that time passes. Opening an item or its notification displays Ready to send. Close that dialog to review Share or return to Write to edit the message or audio and add a gift before creation. Confirm creates the finished hosted Postcard; the user still shares its link separately. Scheduled drafts survive ordinary Reset app and background-timeout resets but can be lost through account deletion or removal of app data. See [Schedule for Later](help-source/scheduling.md).
 
 ---
 
-## Wallet / Postcards page (`/`)
+## Account page (`/`)
 
-The Wallet or Postcards page is the personal usage overview.
+Account is the personal usage overview. Telegram opens its corresponding Account at `/telegram` and connects automatically.
 
 It combines:
 - authenticated identity  
@@ -245,16 +247,18 @@ It combines:
 - **Your Postcards** → previously created Postcards  
 - **Scheduled Postcards** → local scheduled Postcard drafts where supported
 - **Connected chain** → current blockchain network where applicable  
-- **Art Certificate Grid** → owned Art Certificates and other NFTs where supported
+- **Your Art Certificate NFTs** → owned Art Certificates for a supported EVM connection; hidden for Solana and Telegram
 - **Explore shortcut** → return to `/explore`  
-- **Info shortcut** → open Posted.art website  
+- **Info shortcut** → open the Posted.art website's Docs section
 
 ### Art Certificate interactions
 
 Selecting an NFT opens detail view with:
 
-- **Plus** → reuse content associated with a Posted.art **Art Certificate** in `/card`  
-- **Delete** → burn Art Certificate if contract supports burn  
+- **Plus** → open the matching library artwork on Card in single-artwork mode
+- **Bin / Delete NFT** → open burn confirmation when the contract supports it; completing the irreversible burn requires a wallet transaction
+
+Unavailable controls are muted with a ban badge. Library matching for plus and burn support for the bin are separate checks. See [owned Art Certificate controls](help-source/art-certificate-purchase.md#open-an-owned-art-certificate).
 
 ---
 

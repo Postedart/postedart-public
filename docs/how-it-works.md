@@ -9,6 +9,8 @@ The recipient opens a digital envelope made for the moment. Creator participatio
 
 All three products use the same shared visual content library, but support different forms of participation.
 
+For current client-specific instructions and screenshots, use the [Help guides](help-source/screenshot-guidance.md).
+
 ---
 
 ## 1. Postcards
@@ -31,7 +33,8 @@ A Postcard can include:
 6. The user chooses to send the Postcard now or, where supported, schedule it for later.
 7. The app checks the free monthly allowance, subscription state, fair-usage limits, and payment requirements where applicable.
 8. The user confirms the Postcard action.
-9. The Postcard is finalized and becomes available for sharing during its active hosting period, or stored locally as a scheduled draft where scheduling is supported.
+9. For immediate creation, the finished Postcard becomes available through its link during the hosting period. Scheduling instead stores a local draft and reminder.
+10. The sender chooses a sharing destination and recipient and completes sending the finished link. Creating the Postcard or reaching its QR/link panel does not itself deliver a message.
 
 ### Receiving a Postcard
 
@@ -47,21 +50,22 @@ Posted.art is designed around a simple Postcard proposition:
 - Web/EVM, Solana, and Telegram use pay-as-you-use Postcard flows
 - subscription-based sending has a fair-usage limit of **20 active Postcards** at the same time
 
-Platform billing, currency display, and confirmation mechanics can differ by environment. For current pricing details, see the FAQ.
+Platform billing, currency display, and confirmation mechanics can differ by environment. See [FAQ pricing](faq.md#how-much-does-it-cost) for current amounts and [Help eligibility](help-source/pricing.md#free-postcard) for the free offer. Eligibility depends on currently hosted Postcards for the connected account, rather than a promised calendar-date reset. Deleting a hosted Postcard ends access for sender and recipients.
 
 ### Scheduled Postcards
 
-Supported mobile app flows can schedule Postcards.
+Scheduling is available only in the standalone Posted.art iOS and Android apps. It is not available in web/PWA, Telegram, wallet browsers or Farcaster, and does not automatically deliver a message.
 
 In that model:
 
 1. the prepared Postcard draft is stored locally on the user's phone
-2. the user chooses a reminder time between **1 hour** and **1 month** from now
+2. the user chooses a reminder time between **1 hour** and **one calendar month** from now
 3. the app schedules a local notification
-4. the scheduled draft appears in the user's Postcards area
-5. when opened from the notification or Postcards area, the user can send it, choose a new reminder time, add a gift voucher image, delete it, or leave it as a draft
+4. the draft appears under **Account → Scheduled Postcards**, showing its future date/time and then Ready after that time passes
+5. opening the thumbnail or notification displays Ready to send; closing this dialog lets the user review Share or return to Write to edit before creation
+6. confirming creates the finished hosted Postcard; the user then shares its link through their chosen messaging app
 
-To keep device storage lightweight, the app limits scheduled drafts to **5 scheduled Postcards** at the same time.
+The app limits local storage to **5 scheduled Postcards** at the same time, separate from hosted Postcards. Ordinary Reset app and background-timeout resets preserve scheduled drafts; account deletion or removal of app data can clear them. See [Schedule for Later](help-source/scheduling.md).
 
 ### Important Postcard rule
 
@@ -85,13 +89,15 @@ For more detail, see [What does "subject to review and policy guidelines" mean?]
 
 ### Basic Create & Earn flow
 
-1. A creator prepares content and related metadata.
-2. The content is submitted for review.
+1. A creator connects and authenticates the supported EVM wallet where creator proceeds should be received.
+2. The creator prepares an individual artwork file and submits it through Create & Earn for review.
 3. Posted.art evaluates the submission against product and policy requirements.
 4. Approved content is added to the content library.
 5. Approved content becomes available for Postcard use and can be offered as Art Certificates.
 
-Create & Earn is separate from standard consumer postcard usage.
+Individual uploads default to unlimited editions unless a different arrangement is agreed before publication. The form does not let creators set a series name, edition limit or premium price. Named series, limited editions, special pricing and bulk-series submissions are arranged through the [FAQ contact section](faq.md#how-can-i-contact-postedart). See [Create & Earn instructions](help-source/create-and-earn.md).
+
+Create & Earn is separate from standard consumer Postcard usage.
 
 Create & Earn introduces a direct creator revenue model aligned with ownership outcomes rather than advertising-based attention models.
 
@@ -115,7 +121,7 @@ They allow users to purchase images and videos from the same shared content libr
 6. The NFT is minted and appears in the user’s wallet.
 
 Ownership through Art Certificates is optional and independent from Postcards usage.
-Users can participate socially without acquiring ownership.
+Users can create and share personal Postcards without acquiring ownership.
 
 Art Certificates are part of the EVM ownership layer and are not required or exposed in Postcard-only app experiences.
 

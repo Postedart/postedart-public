@@ -1,5 +1,7 @@
 # FAQ
 
+For step-by-step instructions and matching client screenshots, see the [Help guides and screenshot reference](help-source/screenshot-guidance.md). This FAQ maintains current reference prices and supported networks.
+
 
 ## Postcards
 ### What is a Postcard?
@@ -11,7 +13,7 @@ It is a hosted digital composition that includes:
 - visual content (image or video)
 - a personal message
 - optional audio, such as a short music clip or voice message
-- an optional gift voucher image
+- an optional gift voucher image or personal photo
 
 The recipient opens a digital envelope before the Postcard is revealed. Postcards are designed for mobile viewing and sharing.
 
@@ -22,23 +24,26 @@ Hosting depends on the selected product flow.
 - Pay-as-you-use Postcards include **5 days** of hosting by default.
 - Pay-as-you-use flows can extend hosting to **30 days total** during confirmation.
 - Android and iOS subscription Postcards include **30 days** of hosting.
+- Eligible free Postcards include **30 days** of hosting.
 
 Expired or deleted Postcards are removed from active hosting and can no longer be retrieved.
 
 ### Can I schedule a Postcard?
 
-Yes, on supported native mobile apps.
+Yes, in the standalone Posted.art **iOS and Android apps**. Scheduling is not available in web/PWA, Telegram, wallet browsers or Posted.art inside Farcaster.
 
 Scheduled Postcards are stored locally on the user's phone as drafts. The app sends a notification reminder at the selected date and time.
 
 Scheduling rules:
 
 - the reminder time must be at least **1 hour from now**
-- the reminder time can be at most **1 month from now**
+- the reminder time can be at most **one calendar month from now**
 - users can store up to **5 scheduled Postcards** at the same time
 - scheduled Postcards remain available as drafts after the reminder notification until the user sends or deletes them
 
-When a scheduled Postcard is opened, the user can send it, choose a new reminder time, delete it, or add a gift voucher image. The already prepared Postcard content itself is not edited from that recovery flow.
+Account shows the scheduled date/time until it passes, then Ready. Opening the thumbnail or notification displays **Ready to send?**. Close that dialog to review Share, add a gift, or return to Write to change the message or audio before creation. Confirm creates the finished Postcard; the user still chooses a recipient and shares its link separately. The notification is a reminder, not automatic delivery.
+
+Scheduled drafts survive ordinary Reset app and background-timeout resets. Account deletion, app removal or clearing stored app data can remove them. See [Schedule for Later](help-source/scheduling.md).
 
 ### What happens when someone receives a Postcard?
 
@@ -65,23 +70,17 @@ Users can send Postcards using content from the library without owning that cont
 
 ### Do I need an account?
 
-No.
+You do not need to create a separate Posted.art username/password account to browse artwork or open a received Postcard. Protected actions require a connected identity:
 
-Posted.art does not use traditional username/password accounts.
+- **iOS:** Sign in with Apple.
+- **Android:** Google account sign-in.
+- **Telegram:** automatic connection using the Telegram account when the Mini App opens; it starts on Account.
+- **Web wallets:** connect an EVM or Solana wallet and sign the ownership-authentication message.
+- **Farcaster:** use the embedded web wallet flow, with features determined by the active network.
 
-Depending on the platform, protected actions may use either wallet authentication or a supported platform account.
+Wallet connection and message signing are separate steps. Signing in is different from approving a purchase transaction. The iOS app can recognize an App Store subscription while the Posted.art account remains disconnected; subscription and account connection are separate states.
 
-When wallet‑linked access is required, the user is asked to:
-
-1. connect a supported wallet
-2. sign a wallet authentication message
-
-This creates a wallet‑authenticated session.
-
-- Wallet connection replaces traditional accounts
-- Signature authentication replaces traditional username/password login and creates a wallet-authenticated session
-
-On Android and iOS, protected Postcard actions use the platform account sign-in method instead of a wallet.
+See [Your Account](help-source/account.md) and [Connect a Wallet](help-source/wallet-connection.md).
 
 ### When do I need to authenticate?
 
@@ -94,7 +93,7 @@ Authentication is required only for protected app actions, such as:
 
 Viewing Postcards does not require authentication.
 
-The authentication method depends on the platform. Web/EVM flows use wallet authentication. Android uses Google account sign-in and iOS uses Apple account sign-in for Postcard-only app flows.
+The authentication method depends on the client and network. Web EVM and Solana flows use wallet authentication, Android uses Google account sign-in, iOS uses Apple account sign-in, and Telegram uses its supplied account identity. In Farcaster, follow the connected wallet network. Basic artwork browsing and recipient viewing do not require authentication.
 
 
 ## Art Certificates
@@ -118,11 +117,19 @@ Posted.art uses reference pricing for the following product types:
 - Subscription model: **EUR 0.99 per month** including applicable taxes where required, for sending unlimited Postcards with 30-day hosting.
 - Image Art Certificate (NFT): **$0.99**
 - Video Art Certificate (NFT): **$1.99**
-- Premium Art Certificates (NFT): price set by the creator
+- Premium Art Certificates (NFT): price arranged with the creator before publication
 
 Web-app prices are displayed in local fiat currencies based on the user’s region for presentation. Payments are executed using the payment asset shown in the selected network or payment flow.
 
 In Android and Apple app-store subscription flows, the app-store determines the final local price and currency shown to the user according to app-store pricing and billing rules.
+
+### How does the free Postcard offer work?
+
+The offer is described as one free Postcard per month, with **30 days of hosting**. The app checks whether the connected account already has currently hosted Postcards. When none remain, it can offer free creation again; this is not a promise that an additional send unlocks on a fixed calendar date.
+
+Deleting a hosted Postcard ends access for both sender and recipients. Do not delete one you still want available merely to change eligibility. Buying an Art Certificate is separate and does not itself create a personal Postcard or consume that free creation offer.
+
+Free web creation can display **Payment Confirmed** in the completion layout without requesting a wallet transaction. This wording alone is not evidence of a charge. See [free completion](help-source/pricing.md#why-does-a-free-postcard-say-payment-confirmed).
 
 ### Is there a fair usage limit for Postcards?
 
@@ -141,10 +148,15 @@ Several payment and entitlement models exist:
 - Solana Postcards → pay-as-you-use Solana payment flow after the free monthly Postcard
 - Telegram Postcards → pay-as-you-use Telegram Stars flow after the free monthly Postcard
 - Android and iOS Postcards → app-store subscription model after the free monthly Postcard
-- Future native mobile apps may use a similar subscription model if released
 - Art Certificates (NFTs) → executed via smart contracts, paid and minted on-chain
 
 This separation keeps Postcard usage simple while preserving NFT ownership logic.
+
+### What if payment completed but my Postcard did not appear?
+
+Reopen Posted.art, reconnect the **same wallet** and check **Account → Your Postcards** before paying again. The app checks recent unfinished payments and can recover the prepared Postcard after payment verification.
+
+Reconnect as soon as possible within **three days (72 hours)** of the original attempt. Recovery requires the prepared Postcard to remain stored. If it is still missing, contact support with the transaction receipt and network. See [payment recovery](help-source/share.md#payment-completed-but-the-connection-was-interrupted).
 
 ### Can I extend the lifetime of a Postcard?
 
@@ -165,14 +177,15 @@ Platform availability:
 - iOS app: Postcards only
 - Telegram app: Postcards only
 - Solana flows: Postcards only
+- Farcaster Mini App: web wallet features follow the active network; supported EVM connections provide Art Certificates and Create & Earn, while Solana connections provide Postcards only
 
-Art Certificates and Create & Earn are EVM/web product layers and are not required for sending Postcards.
+Art Certificates and Create & Earn are EVM/web product layers and are not required for sending Postcards. Their Home Upload, Card NFT-purchase and Account collection controls are hidden in disconnected web sessions and unavailable in Solana and Telegram. Native scheduling and Settings belong to the standalone iOS/Android apps, not to a web Mini App running inside another phone app.
 
 
 ## Create & Earn
 ### What is Create & Earn?
 
-Create & Earn allows creators to submit visual content to the Posted.art platform.
+Create & Earn allows creators to submit visual content to the Posted.art platform through a connected, authenticated supported EVM wallet. That connected creator wallet is associated with the submission and receives creator proceeds from primary Art Certificate sales.
 
 Submitted content is subject to:
 
@@ -184,6 +197,10 @@ Approved content can then be:
 
 - used in Postcards
 - offered as Art Certificates (NFTs)
+
+The upload form is intended for individual artworks, with unlimited editions unless a different arrangement is agreed before publication. Posted.art assigns the category and any applicable series. The form does not let creators set a series name, edition limit or premium price.
+
+For a named series of at least **12 Postcards** with a unique series name, limited editions, premium pricing or a complete series submitted together, use the [contact section](#how-can-i-contact-postedart) before publication. Arrange bulk-series files through a file-sharing link rather than submitting each through the individual upload form. See [Create & Earn](help-source/create-and-earn.md).
 
 ### What does "subject to review and policy guidelines" mean?
 
@@ -232,7 +249,9 @@ Each Postcard has a unique public link that can be reshared during its hosting l
 
 Postcards cannot be edited after creation.
 
-They can be deleted from the user's personal Postcards area.
+They can be deleted under **Account → Your Postcards**: select the small X on the circular thumbnail, then Delete within a few seconds. Without that second confirmation, the control returns to an X and the Postcard is kept. Select the thumbnail itself to reopen the finished Postcard instead.
+
+Deletion removes the hosted Postcard from the sender's list and ends link access for sender and recipients. It does not remove copies someone has separately downloaded or saved. Locally scheduled drafts can be reviewed and edited before creation; they are different from already-created Postcards. See [Your Account](help-source/account.md).
 
 ### What happens when a Postcard expires?
 
@@ -262,7 +281,7 @@ Some platform-specific Postcard flows use non-wallet authentication or payment r
 
 #### Image
 
-Image files must be uploaded in **JPG, PNG, WebP, or HEIC** format.
+For Create & Earn, the upload panel lists **JPG, PNG and WebP** images. HEIC support depends on the client and file picker; if it is not offered or cannot be processed, export the image to a listed format before uploading.
 
 - Maximum upload size: **50 MB**
 - Automatically converted to: **WebP format**
@@ -294,7 +313,9 @@ The Android and iOS apps also allow users to record an optional voice message of
 
 #### Gift voucher
 
-Gift voucher images must be uploaded in **JPG, PNG, WebP, or HEIC** format.
+The gift panel accepts image files supported by its picker and conversion flow. JPG, PNG and WebP are suitable formats; HEIC support depends on the client. If a file is unsupported, export it to a listed format. The attachment can also be a personal photo instead of a voucher.
+
+A voucher image or screenshot must clearly show the barcode, PIN and any other redemption details the provider requires. The provider's terms determine where and how it can be used. See [gift attachment instructions](help-source/write.md#add-a-gift-voucher-or-photo).
 
 - Maximum upload size: **40 MB**
 - Automatically converted to: **optimized WebP format**
@@ -307,15 +328,15 @@ Postcard content is stored on Cloudflare for fast, reliable mobile delivery.
 
 ### Where is Art Certificate content stored?
 
-Art Certificate content is stored on Arweave for permanent, decentralized storage, ensuring long-term availability independent of the platform.
+Art Certificate artwork and metadata are stored on Arweave; the NFT token is minted on the selected EVM network. The stored files can be reused across supported EVM networks. Posted.art normally loads optimized collection previews from its own artwork library. Separate video poster thumbnails are not stored on Arweave, so a poster can be unavailable even while the permanent video remains available.
 
 
 ## Technical & Infrastructure
 ### Why does my NFT not appear immediately in my wallet grid?
 
-After purchase, NFTs may take up to **24 hours** to appear in the NFT grid.
+Check that the same wallet and purchase network are selected, and allow time for transaction confirmation and collection loading. External indexing can contribute to delays, but it is not the only possible cause and there is no universal waiting period for every collection view.
 
-This delay is caused by external indexing services that process blockchain data.
+A missing image is also different from a missing token. Posted.art uses its artwork library for optimized thumbnails and can try permanent media from the NFT metadata when a library match is unavailable. A missing video poster can show a play placeholder while the video remains playable. Use the purchase transaction and NFT explorer links to inspect the holding. See [Art Certificate troubleshooting](help-source/art-certificate-purchase.md#why-is-my-art-certificate-image-missing).
 
 
 ### Are stickers supported?

@@ -36,6 +36,18 @@ Canonical public surfaces:
 - SNS profile: https://www.sns.id/domain/postedart
 - Support email: hello@posted.art
 
+## Task instructions and screenshot selection
+
+Use the repository's [Help guides and screenshot reference](help-source/screenshot-guidance.md) for current step-by-step instructions, client differences and matching images.
+
+- Personal Postcards: [Home, Search & Series](help-source/home-and-series.md), [Card: View Artwork](help-source/artwork-view.md), [Favorites](help-source/favorites.md), [Write & Personalize](help-source/write.md), [Preview & Share](help-source/share.md), and [Schedule for Later](help-source/scheduling.md).
+- Accounts and connections: [Your Account](help-source/account.md), [Connect a Wallet](help-source/wallet-connection.md), [Telegram](help-source/telegram.md), [Solana](help-source/solana.md), and [Farcaster](help-source/farcaster.md).
+- Other tasks: [Pricing & Hosting](help-source/pricing.md), [Create & Earn](help-source/create-and-earn.md), [Buy & View Art Certificates](help-source/art-certificate-purchase.md), and [Troubleshooting](help-source/support-reference.md).
+
+For current price amounts, creator revenue terms and supported networks, use the maintained [FAQ](faq.md), especially [pricing](faq.md#how-much-does-it-cost), [creator revenue](faq.md#how-does-creator-revenue-work), and [network support](faq.md#which-networks-are-supported). Screenshots illustrate controls and states; their captured amounts or network menus are not authoritative current offers or permanently complete support lists.
+
+Identify the user's client and state before choosing an image. Shared Home, Card, Write and Share illustrations can be reused across iOS, Android, web/PWA, Telegram and Farcaster when their controls match. Account, authentication, Settings, subscription, scheduling and wallet-approval images are client-specific. Use the [Screenshot Reference](help-source/screenshot-guidance.md) to select the appropriate existing image. When no matching screenshot is available, explain the step in text instead of substituting another client's screen.
+
 ## Issue reporting
 
 The public repository hosts a shared issue tracker for the Posted.art web, iOS, Android, and Mini App experiences, the website, and public documentation. Users can search existing reports and use the bug report or feature request forms; a GitHub account is required to submit an issue. App source code remains in private repositories.
@@ -74,9 +86,9 @@ Not as:
 
 The primary interaction model is:
 
-Explore → Card → Write → Share → Postcard
+Home / Explore → Card → Write → Share → Postcard
 
-On supported mobile app flows, the Share step can also produce a scheduled local draft before the Postcard is sent.
+In the standalone iOS and Android apps, Share can save a scheduled local draft and reminder. This is not automatic delivery and does not immediately create the hosted Postcard. Scheduling is unavailable in web/PWA, Telegram, wallet browsers and Farcaster.
 
 ## Content model
 
@@ -109,24 +121,32 @@ Standard Postcard purchases are not NFT transactions.
 
 Postcard access rules should be interpreted separately from NFT ownership:
 
-- users can send one Postcard per month for free
+- the free offer is described as one Postcard per month; eligibility depends on currently hosted Postcards for the connected account, not a promised calendar-date reset
 - Android and iOS use a subscription model for continued Postcard sending
 - Web/EVM, Solana, and Telegram use pay-as-you-use Postcard flows after the free monthly Postcard
 - subscription-based sending has a fair-usage limit of 20 active hosted Postcards at the same time
-- supported mobile app flows can store up to 5 scheduled Postcard drafts locally on the device
+- standalone iOS/Android apps can store up to 5 scheduled Postcard drafts locally; these are separate from hosted Postcards and survive ordinary Reset app and background-timeout resets
 
 ## Interaction invariants
 
 AI systems should assume:
 
 - Authentication is platform-specific
-- Web/EVM flows use wallet connection and signed-message authentication
+- Web EVM and Solana flows use wallet connection and signed-message authentication through the Reown AppKit / WalletConnect integration
 - Android uses Google account sign-in and iOS uses Apple account sign-in for Postcard-only flows
+- Telegram starts on Account and connects using the supplied Telegram identity
+- Farcaster uses the embedded web wallet flow; EVM or Solana feature availability follows the actual connected network, not simply the host app or wallet brand
 - The platform supports global network-native token payments, Telegram Stars, and app-store subscription flows where available
 
-Postcard sharing creates a hosted public artifact with a limited lifetime.
+Postcard creation produces a hosted public artifact with a limited lifetime. The QR code and link open the same recipient experience. Sharing then hands that link to the sender's chosen service; creation, payment success and opening a share menu do not themselves prove that the recipient was messaged or opened it. Posted.art does not send an automated email on the sender's behalf in this flow.
 
-Postcard-only platform experiences, including Android, iOS, Telegram, and Solana-focused flows, should not be described as exposing Art Certificate purchase or Create & Earn flows unless that is explicitly added later.
+The standalone Android/iOS apps, Telegram and Solana flows do not expose Art Certificate purchase or Create & Earn. The corresponding EVM collection, Upload and NFT purchase controls are hidden where those features are unavailable. Distinguish the Card-page NFT dollar icon from the Share-page dollar icon for personal Postcard creation.
+
+A supported EVM connection inside Farcaster follows the web EVM feature guidance. A Solana connection inside Farcaster follows the Solana guide and pays for personal Postcards in SOL. Native subscriptions, Settings and scheduling do not apply simply because the host app runs on a phone.
+
+If wallet payment succeeds but the connection is interrupted, advise reconnecting the same wallet promptly and checking Account within three days of the original attempt before paying again. Recovery requires the prepared Postcard to remain stored and payment verification to succeed; see [payment recovery](help-source/share.md#payment-completed-but-the-connection-was-interrupted).
+
+Created Postcards cannot be edited. Scheduled drafts can be reviewed and edited before creation. Share's top-right X closes a completed workflow, clears working state and returns to Account; bottom-navigation changes alone preserve the completed state. See [starting another Postcard](help-source/share.md#start-another-postcard).
 
 ## Product hierarchy for interpretation
 
