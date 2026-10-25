@@ -1,5 +1,7 @@
 # Write & Personalize
 
+Part of **Postcards — create and send**. New to Posted.art? Start with [How to create and send a Postcard](create-a-postcard.md) for the complete personal Postcard flow.
+
 From the artwork's Card page, select the top-right arrow or bottom pencil icon to open **Write**. Use the canvas to combine your message, stickers, background, music or voice recording, and an optional gift image.
 
 ## Start and format your message

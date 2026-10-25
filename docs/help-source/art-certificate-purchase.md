@@ -1,5 +1,7 @@
 # Buy & View Art Certificates
 
+**For collectors:** this guide covers acquiring optional artwork ownership. To make a personal Postcard for someone, use [How to create and send a Postcard](create-a-postcard.md); an NFT purchase is not required.
+
 An **Art Certificate NFT** is an optional purchase associated with an artwork. Buying one is separate from creating or sending a personal Postcard.
 
 Art Certificate purchases require a wallet connected to a supported **EVM network: Ethereum, Base, BNB Chain or Arbitrum**. Use these instructions in the web app, including inside Farcaster when connected to a supported EVM network. Art Certificate purchasing is not available through the standalone Posted.art iOS/Android apps, Telegram or a Solana connection.

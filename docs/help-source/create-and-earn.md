@@ -1,5 +1,7 @@
 # Create & Earn
 
+**For contributing artists:** Create & Earn submits original artwork to the shared library. To make a personal Postcard for someone, use [How to create and send a Postcard](create-a-postcard.md) instead; that flow starts by choosing existing artwork on Home and does not require this upload control.
+
 Submit individual artworks for review through **Create & Earn** in the web app. This feature requires a connected, authenticated wallet on a supported EVM network: **Ethereum, Base, BNB Chain or Arbitrum**. It is not available through Solana, Telegram or the standalone Posted.art iOS/Android apps. Inside Farcaster, it requires a supported EVM connection.
 
 ## Open Create & Earn

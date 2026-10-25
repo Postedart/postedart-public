@@ -215,6 +215,8 @@ Internal systems are intentionally excluded.
 - [How it works](docs/how-it-works.md)  
 - [App flow](docs/app-flow.md)  
 - [FAQ](docs/faq.md)  
+- [Create and send a Postcard — beginner walkthrough](docs/help-source/create-a-postcard.md)
+- [Help guides and matching screenshots](docs/help-source/screenshot-guidance.md)
 - [AI assistant guide](docs/ai-assistant-guide.md)  
 
 ### Legal

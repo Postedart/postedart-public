@@ -1,5 +1,7 @@
 # Home, Search & Series
 
+Part of **Postcards — create and send**. New to Posted.art? Start with [How to create and send a Postcard](create-a-postcard.md) for the complete personal Postcard flow.
+
 Home shows a selection of artwork from the Posted.art library. Choose an artwork to open its Card page, headed **Explore**, then continue to Write and Share when you want to make a personal Postcard.
 
 ## Get around

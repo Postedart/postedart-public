@@ -38,11 +38,25 @@ Canonical public surfaces:
 
 ## Task instructions and screenshot selection
 
+### Distinguish the three products
+
+| User goal | Product and starting guide |
+| --- | --- |
+| Create, make or send a Postcard to someone | **Postcards**, the main app experience: [How to create and send a Postcard](help-source/create-a-postcard.md). Choose existing artwork on Home, continue through Card, Write and Share, then create and send the link. |
+| Upload or contribute original artwork to the library | **Create & Earn**, for artists: [submit artwork](help-source/create-and-earn.md). This is a separate moderated contribution flow requiring a supported EVM connection. |
+| Buy, collect or view artwork ownership | **Art Certificates**, for collectors: [buy and view Art Certificates](help-source/art-certificate-purchase.md). This is an optional NFT flow. |
+
+Personal Postcard creation does not require uploading artwork or purchasing an Art Certificate. The heart-plus upload control is not the starting point for a request to create a personal Postcard. When someone asks how to create a Postcard, begin with the complete beginner walkthrough rather than creator-submission instructions.
+
+### Detailed instructions and images
+
 Use the repository's [Help guides and screenshot reference](help-source/screenshot-guidance.md) for current step-by-step instructions, client differences and matching images.
 
-- Personal Postcards: [Home, Search & Series](help-source/home-and-series.md), [Card: View Artwork](help-source/artwork-view.md), [Favorites](help-source/favorites.md), [Write & Personalize](help-source/write.md), [Preview & Share](help-source/share.md), and [Schedule for Later](help-source/scheduling.md).
+- Personal Postcards: [Create and send your first Postcard](help-source/create-a-postcard.md), [Home, Search & Series](help-source/home-and-series.md), [Card: View Artwork](help-source/artwork-view.md), [Favorites](help-source/favorites.md), [Write & Personalize](help-source/write.md), [Preview & Share](help-source/share.md), and [Schedule for Later](help-source/scheduling.md).
 - Accounts and connections: [Your Account](help-source/account.md), [Connect a Wallet](help-source/wallet-connection.md), [Telegram](help-source/telegram.md), [Solana](help-source/solana.md), and [Farcaster](help-source/farcaster.md).
-- Other tasks: [Pricing & Hosting](help-source/pricing.md), [Create & Earn](help-source/create-and-earn.md), [Buy & View Art Certificates](help-source/art-certificate-purchase.md), and [Troubleshooting](help-source/support-reference.md).
+- Create & Earn: [Submit original artwork](help-source/create-and-earn.md).
+- Art Certificates: [Buy & View Art Certificates](help-source/art-certificate-purchase.md).
+- Shared support: [Pricing & Hosting](help-source/pricing.md) and [Troubleshooting](help-source/support-reference.md).
 
 For current price amounts, creator revenue terms and supported networks, use the maintained [FAQ](faq.md), especially [pricing](faq.md#how-much-does-it-cost), [creator revenue](faq.md#how-does-creator-revenue-work), and [network support](faq.md#which-networks-are-supported). Screenshots illustrate controls and states; their captured amounts or network menus are not authoritative current offers or permanently complete support lists.
 

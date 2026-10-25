@@ -1,5 +1,7 @@
 # Card: View Artwork
 
+Part of **Postcards — create and send**. New to Posted.art? Start with [How to create and send a Postcard](create-a-postcard.md) for the complete personal Postcard flow.
+
 Open an artwork from **Home** to view it on the **Card** page, headed **Explore**. From here, browse the series, save a Favorite, share the artwork or continue to **Write** to create a personal Postcard.
 
 ## Artwork details and controls

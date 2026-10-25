@@ -6,10 +6,11 @@ Use this reference to choose an existing screenshot that matches the user's clie
 
 | Group | Sections |
 | --- | --- |
-| Create a Postcard | [Home, Search & Series](home-and-series.md) · [Card: View Artwork](artwork-view.md) · [Favorites](favorites.md) · [Write & Personalize](write.md) · [Preview & Share](share.md) · [Schedule for Later](scheduling.md) |
+| Postcards — create and send | [How to create and send a Postcard](create-a-postcard.md) · [Home, Search & Series](home-and-series.md) · [Card: View Artwork](artwork-view.md) · [Favorites](favorites.md) · [Write & Personalize](write.md) · [Preview & Share](share.md) · [Schedule for Later](scheduling.md) |
+| Create & Earn — contribute artwork | [Submit artwork with Create & Earn](create-and-earn.md) |
+| Art Certificates — collect artwork | [Buy & View Art Certificates](art-certificate-purchase.md) |
 | Accounts & Connections | [Your Account](account.md) · [Connect a Wallet](wallet-connection.md) · [Telegram](telegram.md) · [Solana](solana.md) · [Farcaster](farcaster.md) |
 | Pricing | [Pricing & Hosting](pricing.md) |
-| Creators & Collectors | [Create & Earn](create-and-earn.md) · [Buy & View Art Certificates](art-certificate-purchase.md) |
 | Support | [Troubleshooting](support-reference.md) |
 
 ## Select the matching image
@@ -29,6 +30,8 @@ Use [FAQ — current prices](https://github.com/Postedart/postedart-public/blob/
 Use [FAQ — supported networks](https://github.com/Postedart/postedart-public/blob/main/docs/faq.md#which-networks-are-supported) for current support. A network list in an image is not a permanently complete list. Distinguish personal Postcard payments from Art Certificate/Create & Earn support, and check the network actually connected rather than inferring it from the wallet brand or host app.
 
 ## Route by task and client
+
+A request to create, make or send a Postcard belongs to the personal Postcard flow. Use [the complete beginner walkthrough](create-a-postcard.md). The heart-plus Upload control belongs to artist contributions through Create & Earn, not to creating a personal Postcard.
 
 | Task | Matching guide and images |
 | --- | --- |
