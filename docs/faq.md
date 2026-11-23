@@ -1,5 +1,21 @@
 # FAQ
 
+## Getting started
+
+### How do I create and send a personal Postcard?
+
+Choose artwork from the library, write your message, and preview your Postcard. Once you create it, share its link with your recipient. [Follow the Postcard walkthrough](help-source/create-a-postcard.md).
+
+### What does Posted.art mean by “a forever card”?
+
+A “forever card” is a digital artwork you can buy and keep in your collection. When you buy an **Art Certificate (NFT)** for a selected artwork in the Posted.art web app, the certificate goes into your wallet and records your ownership of that edition. [See how to buy and view an Art Certificate](help-source/art-certificate-purchase.md).
+
+### I’m an artist. How can I offer my work on Posted.art?
+
+Submit your original artwork for review through **Create & Earn**. Approved work can join the shared library, and selected work can be offered to collectors as Art Certificates. [See how Create & Earn works](help-source/create-and-earn.md).
+
+## Help guides
+
 For step-by-step instructions and matching client screenshots, see the [Help guides and screenshot reference](help-source/screenshot-guidance.md). This FAQ maintains current reference prices and supported networks.
 
 

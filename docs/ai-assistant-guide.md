@@ -40,6 +40,12 @@ Canonical public surfaces:
 
 ### Distinguish the three products
 
+Use the [Postcard FAQ answer](https://posted.art/help/faq#create-a-postcard) for sending a personal Postcard and the [artist FAQ answer](https://posted.art/help/faq#offer-artwork) for contributing original work. Their walkthroughs are listed below.
+
+For “What does Posted.art mean by ‘a forever card’?”, start with the [buyer’s FAQ answer](https://posted.art/help/faq#forever-card). A customer buys an Art Certificate (NFT) for a selected artwork and holds the certificate for that edition in their wallet. Offer the [collector walkthrough](help-source/art-certificate-purchase.md) for purchase instructions. Mention Create & Earn second if artist participation is relevant. Postcard creation and hosting periods answer separate questions.
+
+If illustrating this answer, use the [official example of an owned Art Certificate in Account on Base](help-source/screenshots/web-account-base-owned-certificate.png). If the image cannot be displayed, link to the collector walkthrough.
+
 | User goal | Product and starting guide |
 | --- | --- |
 | Create, make or send a Postcard to someone | **Postcards**, the main app experience: [How to create and send a Postcard](help-source/create-a-postcard.md). Choose existing artwork on Home, continue through Card, Write and Share, then create and send the link. |
